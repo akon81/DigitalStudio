@@ -1,9 +1,9 @@
-<div class="w-full md:w-1/2 lg:w-1/3 p-4 portfolio-item" style="transition: opacity 0.3s, transform 0.3s;" data-category="{{ $category ?? '' }}">
+<div class="w-full md:w-1/2 lg:w-1/3 p-4 portfolio-item" data-category="{{ $category ?? '' }}">
     <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 relative group">
         <div class="relative">
             <img class="w-full h-64 object-cover" src="{{ $img }}" alt="{{ $title }}"/>
             <!-- Hover overlay only over image -->
-            <div class="absolute left-0 top-0 w-full h-full bg-white bg-opacity-80 flex flex-col justify-center items-center px-6 py-8 opacity-0 -translate-y-full group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+            <div class="absolute left-0 top-0 w-full h-full bg-white flex flex-col justify-center items-center px-6 py-8 opacity-0 -translate-y-full group-hover:opacity-80 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
                 <h3 class="text-gray-900 font-black font-heading text-2xl mb-3">{{ $title }}</h3>
                 <p class="text-gray-700 font-bold text-center">{{ $description }}</p>
             </div>
