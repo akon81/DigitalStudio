@@ -1,7 +1,7 @@
  <section class="py-20 bg-gray-50 overflow-hidden" id="portfolio">       
   <div class="container mx-auto px-4">
     <div class="mb-16 text-center">
-      <span class="inline-block mb-3 text-sm text-blue-500 font-bold uppercase tracking-widest">Moje prace</span>
+      <span class="inline-block mb-3 text-sm text-blue-500 font-bold uppercase tracking-widest">Przykładowe realizacje</span>
       <h2 class="text-gray-900 font-black font-heading text-5xl md:text-6xl mb-6">Portfolio projektów</h2>
       <p class="text-xl text-gray-500 font-bold max-w-2xl mx-auto">Poznaj projekty, które stworzyłem dla moich klientów - od prostych stron po złożone aplikacje webowe.</p>
     </div>

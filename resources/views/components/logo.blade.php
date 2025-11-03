@@ -1,0 +1,1 @@
+<div class="mb-3 text-xl text-black font-bold uppercase tracking-widest">Digit<span class="text-blue-500 text-2xl">WebStudio</span></div>

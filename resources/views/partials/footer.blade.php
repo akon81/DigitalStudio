@@ -9,14 +9,14 @@
 			</div>
 			<div class="w-full md:w-auto">
 				<ul class="flex flex-wrap items-center gap-6">
+					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="{{ route('home') }}">Strona główna</a></li>
 					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="#portfolio">Portfolio</a></li>
-					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="#technologie">Technologie</a></li>
 					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="#kontakt">Kontakt</a></li>
 				</ul>
 			</div>
 		</div>
 		<div class="pt-8 flex flex-wrap justify-between items-center">
-			<p class="text-sm text-gray-400 font-bold">© 2024 DevPortfolio. Wszelkie prawa zastrzeżone.</p>
+			<p class="text-sm text-gray-400 font-bold">© 2025 DigitWebStudio. Wszelkie prawa zastrzeżone.</p>
 			<div class="flex gap-4">
 				<a class="text-gray-400 hover:text-white" href="#">
 					<svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

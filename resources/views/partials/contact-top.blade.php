@@ -5,11 +5,11 @@
 			<div class="flex items-center gap-6 text-gray-900 text-sm font-bold">
 				<div class="flex items-center gap-2">
 					<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2 8.5C2 6.015 4.015 4 6.5 4h11A4.5 4.5 0 0 1 22 8.5v7A4.5 4.5 0 0 1 17.5 20h-11A4.5 4.5 0 0 1 2 15.5v-7Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 8l6 4 6-4"/></svg>
-					<a href="mailto:kontakt@example.com" class="hover:text-blue-500 transition">kontakt@example.com</a>
+					<a href="mailto:kontakt@example.com" class="hover:text-blue-500 transition">kontakt@digitwebstudio.pl</a>
 				</div>
 				<div class="flex items-center gap-2">
 					<svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5.75C3 4.784 3.784 4 4.75 4h2.086c.414 0 .789.252.936.64l1.14 2.853a1 1 0 0 1-.217 1.09l-1.13 1.13a15.978 15.978 0 0 0 6.364 6.364l1.13-1.13a1 1 0 0 1 1.09-.217l2.853 1.14c.388.147.64.522.64.936V19.25A1.75 1.75 0 0 1 19.25 21h-1.5C10.044 21 3 13.956 3 5.75v0Z"/></svg>
-					<a href="tel:+48123456789" class="hover:text-blue-500 transition">+48 123 456 789</a>
+					<a href="tel:+48692802919" class="hover:text-blue-500 transition">+48 692 802 919</a>
 				</div>
 			</div>
 			<div class="flex items-center gap-4">

@@ -1,16 +1,16 @@
 ## Start projektu
 
-- [ ]  Utwórz nowy projekt Laravel 12 w HERD
+- [ ]  Utwï¿½rz nowy projekt Laravel 12 w HERD
     
     ```bash
-    laravel new 4app-portfolio
+    laravel new digitwebstudio
     
     ```
     
 
 Skonfiguruj .env (DB, MAIL, APP_URL)
 
-Zainstaluj Filament v4 i utwórz konto admina
+Zainstaluj Filament v4 i utwï¿½rz konto admina
 
 ```
 composer require filament/filament:"^3.0"
@@ -20,53 +20,53 @@ php artisan make:filament-user
 
 ? 2. Instalacje dodatkowe
 
-Zainstaluj Spatie Media Library (do galerii projektów)
+Zainstaluj Spatie Media Library (do galerii projektï¿½w)
 
 composer require spatie/laravel-medialibrary:^11.0
 php artisan vendor:publish --tag="media-library-migrations"
 php artisan migrate
 
 ```
-Zainstaluj filament/spatie-media-library-plugin (opcjonalnie – lepszy upload w panelu)
+Zainstaluj filament/spatie-media-library-plugin (opcjonalnie ï¿½ lepszy upload w panelu)
 
 ```
 
 ? 3. Modele i migracje
 
-Project – projekty portfolio
+Project ï¿½ projekty portfolio
 
 ```
 title, slug, description, images, category_id, tags (pivot), published_at
 
 ```
 
-Category – kategorie projektów
+Category ï¿½ kategorie projektï¿½w
 
 ```
 name, slug
 
 ```
 
-Tag – tagi/technologie
+Tag ï¿½ tagi/technologie
 
 ```
 name, slug
 
 ```
 
-TechStack – technologie w stacku
+TechStack ï¿½ technologie w stacku
 
 ```
 name, icon, description, order
 
 ```
 
-ContactInfo – edytowalne dane kontaktowe
+ContactInfo ï¿½ edytowalne dane kontaktowe
 
 ```
 email, phone, linkedin, github, other_links
 
-Message – wiadomoœci kontaktowe
+Message ï¿½ wiadomoï¿½ci kontaktowe
 
     name, email, message, status
 
@@ -74,24 +74,24 @@ Message – wiadomoœci kontaktowe
 
 ? 4. Filament Resources
 
-ProjectResource – CRUD + upload galerii
+ProjectResource ï¿½ CRUD + upload galerii
 
-CategoryResource – CRUD kategorii
+CategoryResource ï¿½ CRUD kategorii
 
-TagResource – CRUD tagów
+TagResource ï¿½ CRUD tagï¿½w
 
-TechStackResource – CRUD stacku (kolejnoœæ, ikony)
+TechStackResource ï¿½ CRUD stacku (kolejnoï¿½ï¿½, ikony)
 
-ContactInfoResource – edycja danych kontaktowych
+ContactInfoResource ï¿½ edycja danych kontaktowych
 
 ```
-MessageResource – podgl¹d wiadomoœci + zmiana statusu
+MessageResource ï¿½ podglï¿½d wiadomoï¿½ci + zmiana statusu
 
 ```
 
 ? 5. Frontend (Blade)
 
-/ – strona g³ówna
+/ ï¿½ strona gï¿½ï¿½wna
 
 ```
 Hero (statycznie w Blade)
@@ -104,12 +104,12 @@ Dane kontaktowe (z ContactInfo)
 
 ```
 
-/portfolio – wszystkie projekty z filtrowaniem po kategoriach/tagach
+/portfolio ï¿½ wszystkie projekty z filtrowaniem po kategoriach/tagach
 
-/portfolio/{slug} – szczegó³y projektu (opis, galeria, technologie)
+/portfolio/{slug} ï¿½ szczegï¿½y projektu (opis, galeria, technologie)
 
 ```
-/contact – formularz kontaktowy (zapis do DB + wysy³ka maila)
+/contact ï¿½ formularz kontaktowy (zapis do DB + wysyï¿½ka maila)
 
 ```
 
