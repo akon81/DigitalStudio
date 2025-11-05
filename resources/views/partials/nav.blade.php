@@ -2,11 +2,11 @@
 <section class="pt-6 bg-white overflow-hidden" x-data="{ mobileNavOpen: false }">
 	<div class="container mx-auto px-4">
 		<div class="mb-6">
-		<div class="flex items-center justify-between px-6 py-3.5 bg-white border border-gray-100 rounded-full">
+		<div class="flex items-center justify-between px-6 py-3.5 bg-white">
 			<div class="w-auto">
 			<div class="flex flex-wrap items-center">
-				<div class="w-auto">
-					<x-logo />
+				<div class="w-auto mb-3">
+					<x-logo/>
 				</div>
 			</div>
 			</div>
@@ -47,7 +47,7 @@
 				<div class="w-full">
 				<div class="flex items-center justify-between -m-2">
 					<div class="w-auto p-2">
-						<x-logo />
+						<x-logo width="240"/>
 					</div>
 					<div class="w-auto p-2">
 					<button x-on:click="mobileNavOpen = !mobileNavOpen" class="inline-block">

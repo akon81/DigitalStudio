@@ -3,9 +3,7 @@
 	<div class="container mx-auto px-4">
 		<div class="flex flex-wrap justify-between items-center pb-8 border-b border-gray-800">
 			<div class="w-full md:w-auto mb-6 md:mb-0">
-				<a href="#">
-					<img src="https://static.shuffle.dev/uploads/files/10/1089a37f6a24e785e2fcb5a6cc45dc91f84be473/logos/logo-b444d91c9cdc57b8c93732520d59eb12.png" alt=""/>
-				</a>
+				<x-logo file="ds_logo_inv.png"/>
 			</div>
 			<div class="w-full md:w-auto">
 				<ul class="flex flex-wrap items-center gap-6">
