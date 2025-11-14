@@ -14,7 +14,7 @@
 			</div>
 		</div>
 		<div class="pt-8 flex flex-wrap justify-between items-center">
-			<p class="text-sm text-gray-400 font-bold">© {{ now()->year }} {{ config('app.name') }}. Wszelkie prawa zastrzeżone.</p>
+			<p class="text-xs md:text-sm text-gray-400 font-bold">© {{ now()->year }} {{ config('app.name') }}. Wszelkie prawa zastrzeżone.</p>
 			<div class="flex gap-4">
 				<a class="text-gray-400 hover:text-white" href="{{ $settings->facebook }}">
 					<svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
