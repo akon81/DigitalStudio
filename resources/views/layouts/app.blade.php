@@ -17,7 +17,7 @@
 
     @yield('content')
 
-    @include('partials.footer')
+    @include('partials.footer', ['settings' => app(\App\Settings\GeneralSettings::class)])
 
     <x-scrollup/>
 
