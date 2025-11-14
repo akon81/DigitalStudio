@@ -11,7 +11,7 @@
     @vite('resources/css/app.css')
 </head>
 <body>
-    @include('partials.contact-top')
+    @include('partials.contact-top', ['settings' => app(\App\Settings\GeneralSettings::class)])
     @include('partials.nav')
     @include('partials.hero')
 
