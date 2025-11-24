@@ -34,7 +34,7 @@
                         <div class="flex items-start gap-4">
                             <div class="shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-blue-100">
                                 <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-4.42c0-.88-.564-1.667-1.406-1.945l-1.789-.894c-.777-.389-1.719-.389-2.496 0l-1.789.894c-.842.278-1.406 1.065-1.406 1.945v2.494c-3.337-2.127-6.435-5.225-8.562-8.562v-2.494c0-.88.564-1.667 1.406-1.945l1.789-.894c.777-.389 1.719-.389 2.496 0l1.789.894c.842.278 1.406 1.065 1.406 1.945v2.25c2.25-3.723 5.973-6.25 10.304-6.25"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5.75C3 4.784 3.784 4 4.75 4h2.086c.414 0 .789.252.936.64l1.14 2.853a1 1 0 0 1-.217 1.09l-1.13 1.13a15.978 15.978 0 0 0 6.364 6.364l1.13-1.13a1 1 0 0 1 1.09-.217l2.853 1.14c.388.147.64.522.64.936V19.25A1.75 1.75 0 0 1 19.25 21h-1.5C10.044 21 3 13.956 3 5.75v0Z"></path>
                                 </svg>
                             </div>
                             <div>
