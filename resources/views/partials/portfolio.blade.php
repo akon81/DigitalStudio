@@ -66,7 +66,9 @@
       img="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600"
       :tags="['React', 'Express', 'PostgreSQL']"
     />
-  </div>
+    </div>
+    <div class="mt-12 text-center">
+      <a href="#" class="inline-block px-8 py-4 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600 transition focus:ring-4 focus:ring-blue-200">Pokaż wszystkie projekty</a>
     </div>
   </div>
 </section>
