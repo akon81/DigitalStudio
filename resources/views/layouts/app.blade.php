@@ -13,7 +13,6 @@
 <body>
     @include('partials.contact-top', ['settings' => app(\App\Settings\GeneralSettings::class)])
     @include('partials.nav')
-    @include('partials.hero')
 
     @yield('content')
 

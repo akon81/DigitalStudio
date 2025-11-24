@@ -15,7 +15,7 @@
 				<div class="w-auto hidden lg:block">
 				<ul class="flex items-center justify-center">
 					<li class="mr-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="{{ route('home') }}">Strona główna</a></li>
-					<li class="mr-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="#portfolio">Portfolio</a></li>
+					<li class="mr-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="{{ route('portfolio') }}">Portfolio</a></li>
 					<li class="mr-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="#kontakt">Kontakt</a></li>
 				</ul>
 				</div>
