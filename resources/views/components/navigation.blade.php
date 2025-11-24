@@ -1,3 +1,12 @@
+@props([
+    'buttonTitle' => 'Skontaktuj się',
+    'buttonUrl' => '#kontakt',
+    'items' => [
+        ['label' => 'Strona główna', 'route' => 'home'],
+        ['label' => 'Portfolio', 'route' => 'portfolio'],
+        ['label' => 'Kontakt', 'route' => 'contact'],
+    ],
+])
 
 <section class="pt-6 bg-white overflow-hidden" x-data="{ mobileNavOpen: false }">
 	<div class="container mx-auto px-4">
@@ -14,9 +23,13 @@
 			<nav class="flex flex-wrap items-center">
 				<div class="w-auto hidden lg:block">
 				<ul class="flex items-center justify-center">
-					<li class="mr-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="{{ route('home') }}">Strona główna</a></li>
-					<li class="mr-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="{{ route('portfolio') }}">Portfolio</a></li>
-					<li class="mr-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="{{ route('contact') }}">Kontakt</a></li>
+					@foreach($items as $item)
+						<li class="mr-9">
+							<a class="inline-block text-base font-bold {{ request()->routeIs($item['route']) ? 'text-blue-500' : 'text-gray-900 hover:text-gray-500' }}" href="{{ route($item['route']) }}">
+								{{ $item['label'] }}
+							</a>
+						</li>
+					@endforeach
 				</ul>
 				</div>
 			</nav>
@@ -25,7 +38,7 @@
 			<div class="flex flex-wrap items-center">
 				<div class="w-auto hidden lg:block">
 				<div class="flex flex-wrap -m-2">
-					<x-button-main title="Skontaktuj się" url="#kontakt" />
+					<x-button-main :title="$buttonTitle" :url="$buttonUrl" />
 				</div>
 				</div>
 				<div class="w-auto lg:hidden">
@@ -60,14 +73,18 @@
 				</div>
 				<nav class="flex flex-col justify-center py-8 w-full">
 				<ul>
-					<li class="mb-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="{{ route('home') }}">Strona główna</a></li>
-					<li class="mb-9"><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="#portfolio">Portfolio</a></li>
-					<li><a class="inline-block text-sm font-bold text-gray-900 hover:text-gray-700" href="#kontakt">Kontakt</a></li>
+					@foreach($items as $item)
+						<li class="mb-9">
+							<a class="inline-block text-sm font-bold {{ request()->routeIs($item['route']) ? 'text-blue-500' : 'text-gray-900 hover:text-gray-700' }}" href="{{ route($item['route']) }}">
+								{{ $item['label'] }}
+							</a>
+						</li>
+					@endforeach
 				</ul>
 				</nav>
 				<div class="flex flex-col justify-end w-full pb-8">
 				<div class="flex flex-wrap -m-2">
-					<x-button-main title="Skontaktuj się" url="#portfolio" />
+					<x-button-main :title="$buttonTitle" :url="$buttonUrl" />
 				</div>
 				</div>
 			</div>
