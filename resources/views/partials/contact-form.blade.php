@@ -34,7 +34,7 @@
 						</div>
 						<label class="text-sm text-gray-900 font-bold" for="contactPrivacy">Zgadzam się na przetwarzanie moich danych osobowych zgodnie z polityką prywatności</label>
 					</div>
-					<div>
+					<div class="text-center">
 						<button class="inline-block px-8 py-3.5 text-lg text-center text-white font-bold bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full" type="submit">Wyślij wiadomość</button>
 					</div>
 				</form>
