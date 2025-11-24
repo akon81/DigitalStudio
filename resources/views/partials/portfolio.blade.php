@@ -6,10 +6,10 @@
       <p class="text-xl text-gray-500 font-bold max-w-2xl mx-auto">Poznaj projekty, które stworzyłem dla moich klientów - od prostych stron po złożone aplikacje webowe.</p>
     </div>
     <div class="mb-12 flex flex-wrap justify-center gap-3">
-  <button class="portfolio-filter-btn px-6 py-3 text-sm font-bold bg-blue-500 text-white rounded-full hover:bg-blue-600 focus:ring-4 focus:ring-blue-200" data-category="wszystkie">Wszystkie</button>
-  <button class="portfolio-filter-btn px-6 py-3 text-sm font-bold bg-white text-gray-900 border border-gray-200 rounded-full hover:bg-gray-50 focus:ring-4 focus:ring-gray-200" data-category="Strony WWW">Strony WWW</button>
-  <button class="portfolio-filter-btn px-6 py-3 text-sm font-bold bg-white text-gray-900 border border-gray-200 rounded-full hover:bg-gray-50 focus:ring-4 focus:ring-gray-200" data-category="Aplikacje Web">Aplikacje Web</button>
-  <button class="portfolio-filter-btn px-6 py-3 text-sm font-bold bg-white text-gray-900 border border-gray-200 rounded-full hover:bg-gray-50 focus:ring-4 focus:ring-gray-200" data-category="E-commerce">E-commerce</button>
+      <x-portfolio-filter-btn category="wszystkie" :active="true">Wszystkie</x-portfolio-filter-btn>
+      <x-portfolio-filter-btn category="Strony WWW">Strony WWW</x-portfolio-filter-btn>
+      <x-portfolio-filter-btn category="Aplikacje Web">Aplikacje Web</x-portfolio-filter-btn>
+      <x-portfolio-filter-btn category="E-commerce">E-commerce</x-portfolio-filter-btn>
     </div>
     <div class="flex flex-wrap -m-4" id="portfolio-grid">
     <x-portfolio-card
