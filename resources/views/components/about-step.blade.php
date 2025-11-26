@@ -2,12 +2,10 @@
     'icon' => null,
     'title' => '',
     'description' => '',
-    'bg' => 'bg-blue-500',
-    'hover' => 'bg-blue-600',
 ])
 
 <div class="text-center">
-    <div class="mx-auto w-16 h-16 flex items-center justify-center {{ $bg }} hover:{{ $hover }} text-white rounded-full shadow-md">
+    <div class="mx-auto w-16 h-16 flex items-center justify-center bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-full shadow-md hover:scale-110 transition-transform duration-300">
         @if ($icon)
             <x-dynamic-component :component="$icon" class="w-8 h-8" />
         @endif
