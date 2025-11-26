@@ -13,7 +13,10 @@ use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Filament\Http\Middleware\AuthenticateSession;
+use Caresome\FilamentAuthDesigner\Enums\AuthLayout;
+use Caresome\FilamentAuthDesigner\AuthDesignerPlugin;
 use Illuminate\Routing\Middleware\SubstituteBindings;
+use Caresome\FilamentAuthDesigner\Enums\ThemePosition;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -34,6 +37,15 @@ class AdminPanelProvider extends PanelProvider
                 'gray' => Color::Stone,
                 'danger' => Color::Red,
             ])
+            ->plugin(
+            AuthDesignerPlugin::make()
+                ->login(
+                    layout: AuthLayout::Overlay,
+                    media: asset('assets/img/zimowy-krajobraz.jpg'),
+                    blur: 10
+                )
+                ->themeToggle(ThemePosition::TopRight)
+            )
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
