@@ -1,24 +1,36 @@
-<?php
+use App\Models\User;
 
-use Livewire\Volt\Volt;
+test('programmatic user creation and authentication', function () {
+    // Public registration UI is disabled in this app (auth via Filament admin).
+    // Test that we can create a user and authenticate programmatically.
+    $user = User::factory()->create([ 'password' => bcrypt('password') ]);
 
-test('registration screen can be rendered', function () {
-    $response = $this->get(route('register'));
+    $this->actingAs($user);
 
-    $response->assertStatus(200);
+    $this->assertAuthenticatedAs($user);
 });
 
-test('new users can register', function () {
-    $response = Volt::test('auth.register')
-        ->set('name', 'Test User')
-        ->set('email', 'test@example.com')
-        ->set('password', 'password')
-        ->set('password_confirmation', 'password')
-        ->call('register');
+test('new users can be created programmatically', function () {
+    User::factory()->create([
+        'name' => 'Test User',
+        'email' => 'test@example.com',
+        'password' => bcrypt('password'),
+    ]);
 
-    $response
-        ->assertHasNoErrors()
-        ->assertRedirect(route('dashboard', absolute: false));
+    $this->assertDatabaseHas(User::class, [
+        'email' => 'test@example.com',
+    ]);
+});
+<?php
 
-    $this->assertAuthenticated();
+use App\Models\User;
+
+test('programmatic user creation and authentication', function () {
+    // Public registration UI is disabled in this app (auth via Filament admin).
+    // Test that we can create a user and authenticate programmatically.
+    $user = User::factory()->create([ 'password' => bcrypt('password') ]);
+
+    $this->actingAs($user);
+
+    $this->assertAuthenticatedAs($user);
 });

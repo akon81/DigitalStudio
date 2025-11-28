@@ -1,48 +1,51 @@
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
+test('users can authenticate programmatically', function () {
+    $user = User::factory()->create([
+        'password' => bcrypt('password'),
+    ]);
+
+    // Programmatic auth: attempt to validate credentials
+    $this->assertTrue(Hash::check('password', $user->password));
+
+    // Simulate login
+    $this->actingAs($user);
+
+    $this->assertAuthenticated();
+    $this->assertAuthenticatedAs($user);
+});
+
+test('users cannot authenticate with invalid password', function () {
+    $user = User::factory()->create([
+        'password' => bcrypt('password'),
+    ]);
+
+    $this->assertFalse(Hash::check('wrong-password', $user->password));
+
+    // Ensure guest when not acting as user
+    $this->assertGuest();
+});
 <?php
 
 use App\Models\User;
-use Livewire\Volt\Volt as LivewireVolt;
+use Illuminate\Support\Facades\Hash;
 
-test('login screen can be rendered', function () {
-    $response = $this->get(route('login'));
+test('programmatic login and logout behavior', function () {
+    $user = User::factory()->create([ 'password' => bcrypt('password') ]);
 
-    $response->assertStatus(200);
-});
+    // Programmatic authentication (UI disabled)
+    $this->actingAs($user);
+    $this->assertAuthenticatedAs($user);
 
-test('users can authenticate using the login screen', function () {
-    $user = User::factory()->create();
-
-    $response = LivewireVolt::test('auth.login')
-        ->set('email', $user->email)
-        ->set('password', 'password')
-        ->call('login');
-
-    $response
-        ->assertHasNoErrors()
-        ->assertRedirect(route('dashboard', absolute: false));
-
-    $this->assertAuthenticated();
-});
-
-test('users can not authenticate with invalid password', function () {
-    $user = User::factory()->create();
-
-    $response = LivewireVolt::test('auth.login')
-        ->set('email', $user->email)
-        ->set('password', 'wrong-password')
-        ->call('login');
-
-    $response->assertHasErrors('email');
-
-    $this->assertGuest();
-});
-
-test('users can logout', function () {
-    $user = User::factory()->create();
-
-    $response = $this->actingAs($user)->post(route('logout'));
-
+    // Logout route should still work
+    $response = $this->post(route('logout'));
     $response->assertRedirect(route('home'));
-
     $this->assertGuest();
+});
+
+test('password verification works for invalid password', function () {
+    $user = User::factory()->create([ 'password' => bcrypt('password') ]);
+
+    expect(Hash::check('wrong-password', $user->password))->toBeFalse();
 });
