@@ -8,8 +8,8 @@
             <!-- Dane kontaktowe -->
             <div class="max-w-2xl mx-auto mb-20">
                 <div class="mb-12">
-                    <h1 class="text-gray-900 text-center font-black font-heading text-4xl md:text-6xl mb-6">Skontaktuj się</h1>
-                    <p class="text-xl text-gray-500 font-bold">Jestem dostępny do rozmowy o Twoim projekcie. Skontaktuj się ze mną przez dowolny z poniższych kanałów.</p>
+                    <h1 class="text-gray-900 text-center font-black font-heading text-4xl md:text-6xl mb-6">Zapraszam do kontaktu</h1>
+                    <p class="text-xl text-gray-500 font-bold">Potrzebujesz wsparcia przy swoim projekcie? Skontaktuj się ze mną</p>
                 </div>
 
                 <div class="bg-gray-50 border border-gray-100 hover:border-gray-200 rounded-3xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -44,6 +44,28 @@
                         </div>
                     </div>
                 </div>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
+
+                <x-contact-feature
+                    icon="heroicon-o-bolt"
+                    title="Szybka odpowiedź"
+                    description="Otrzymasz odpowiedź w krótkim czasie, abyś mógł szybko ruszyć ze swoim projektem."
+                />
+
+                <x-contact-feature
+                    icon="heroicon-o-lifebuoy"
+                    title="Wsparcie na każdym etapie"
+                    description="Od pierwszej rozmowy po wdrożenie możesz liczyć na pomoc i doradztwo."
+                />
+
+                <x-contact-feature
+                    icon="heroicon-o-cube"
+                    title="Realne rozwiązania"
+                    description="Proponuję tylko takie działania, które naprawdę poprawiają jakość Twojej strony lub biznesu."
+                />
 
             </div>
 

@@ -4,7 +4,7 @@
             <img class="w-full h-64 object-cover" src="{{ $img }}" alt="{{ $title }}"/>
             <!-- Hover overlay only over image -->
             <div class="absolute left-0 top-0 w-full h-full bg-white flex flex-col justify-center items-center px-6 py-8 opacity-0 -translate-y-full group-hover:opacity-80 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-                <h3 class="text-gray-900 font-black font-heading text-2xl mb-3">{{ $title }}</h3>
+                <h3 class="text-gray-900 font-black font-heading text-2xl mb-3 text-center">{{ $title }}</h3>
                 <p class="text-gray-700 font-bold text-center">{{ strip_tags($description) }}</p>
             </div>
         </div>
@@ -16,7 +16,7 @@
                     @endforeach
                 @endif
             </div>
-            <h3 class="text-gray-900 font-black font-heading text-2xl mb-3">{{ $title }}</h3>
+            <h3 class="text-gray-900 font-black font-heading text-2xl mb-3 text-center">{{ $title }}</h3>
             <p class="text-gray-500 font-bold mb-4">{{ $excerpt }}</p>
             <a class="inline-flex items-center text-blue-500 font-bold hover:text-blue-600" href="{{ $url }}">
                 Zobacz projekt
