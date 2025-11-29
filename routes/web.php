@@ -1,13 +1,11 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
-
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-
 use App\Http\Controllers\PortfolioController;
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
