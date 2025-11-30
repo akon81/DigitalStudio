@@ -4,7 +4,7 @@
 		<div class="max-w-4xl mx-auto">
 			<div class="mb-16 text-center">
 				<span class="inline-block mb-3 text-sm text-blue-500 font-bold uppercase tracking-widest">Skontaktuj się</span>
-				<h2 class="text-gray-900 font-black font-heading text-3xl md:text-5xl mb-6">Porozmawiajmy o projekcie</h2>
+				<h2 class="text-gray-900 font-black font-heading text-3xl md:text-5xl mb-6">Porozmawiajmy o Twoim projekcie</h2>
 				<p class="text-xl text-gray-500 font-bold max-w-2xl mx-auto">Masz pomysł na projekt? Wypełnij formularz, a odezwę się najszybciej jak to możliwe.</p>
 			</div>
 			<div class="bg-gray-50 border border-gray-100 hover:border-gray-200 rounded-3xl p-8 md:p-12">
