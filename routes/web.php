@@ -9,6 +9,10 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
+Route::get('/faq', function () {
+    return view('faq');
+})->name('faq');
+
 Route::get('/kontakt', function () {
     return view('contact', ['settings' => app(\App\Settings\GeneralSettings::class)]);
 })->name('contact');

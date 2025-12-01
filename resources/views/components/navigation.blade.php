@@ -4,6 +4,7 @@
     'items' => [
         ['label' => 'Strona główna', 'route' => 'home'],
         ['label' => 'Portfolio', 'route' => 'portfolio'],
+        ['label' => 'FAQ', 'route' => 'faq'],
         ['label' => 'Kontakt', 'route' => 'contact'],
     ],
 ])
