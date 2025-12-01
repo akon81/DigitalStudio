@@ -9,18 +9,14 @@
 
         <div class="space-y-28">
 
-            <div 
-                x-data 
-                x-intersect="$el.classList.add('opacity-100','translate-y-0')"
-                class="opacity-0 translate-y-10 transition-all duration-700 ease-out"
-            >
+            <div x-data="{ open: false }">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     
                     <div>
-                        <span class="text-sm font-semibold text-green-700 uppercase tracking-wide">01. Agro-Stalex</span>
+                        <span @click="open = ! open" class="text-sm font-semibold text-green-700 uppercase tracking-wide">01. Agro-Stalex</span>
                         <h3 class="text-3xl font-bold text-gray-900 mt-2">Cyfrowa transformacja producenta maszyn rolniczych</h3>
 
-                        <div class="mt-6 space-y-6">
+                        <div x-show="open" class="mt-6 space-y-6 ">
                             <div class="flex gap-4">
                                 <div class="p-3 bg-green-100 text-green-600 rounded-xl">
                                     <x-heroicon-o-light-bulb class="w-6 h-6"/>
@@ -71,18 +67,14 @@
                 </div>
             </div>
 
-            <div 
-                x-data 
-                x-intersect="$el.classList.add('opacity-100','translate-y-0')"
-                class="opacity-0 translate-y-10 transition-all duration-700 ease-out"
-            >
+            <div x-data="{ open: false }">
                 <div class="grid md:grid-cols-2 gap-12 items-center md:flex-row-reverse">
                     
                     <div class="order-2 md:order-1">
-                        <span class="text-sm font-semibold text-orange-600 uppercase tracking-wide">02. Alpakraina</span>
+                        <span @click="open = ! open"  class="text-sm font-semibold text-orange-600 uppercase tracking-wide">02. Alpakraina</span>
                         <h3 class="text-3xl font-bold text-gray-900 mt-2">Strona miejsca, które żyje swoją historią</h3>
 
-                        <div class="mt-6 space-y-6">
+                        <div x-show="open" class="mt-6 space-y-6">
                             <div class="flex gap-4">
                                 <div class="p-3 bg-orange-100 text-orange-600 rounded-xl">
                                     <x-heroicon-o-map class="w-6 h-6"/>
@@ -133,17 +125,14 @@
             </div>
 
             <div 
-                x-data 
-                x-intersect="$el.classList.add('opacity-100','translate-y-0')"
-                class="opacity-0 translate-y-10 transition-all duration-700 ease-out"
-            >
+                x-data="{ open: false }">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     
                     <div>
-                        <span class="text-sm font-semibold text-purple-700 uppercase tracking-wide">03. Aktywnie dla siebie</span>
+                        <span @click="open = ! open" class="text-sm font-semibold text-purple-700 uppercase tracking-wide">03. Aktywnie dla siebie</span>
                         <h3 class="text-3xl font-bold text-gray-900 mt-2">Platforma wspierająca rozwój i zdrowie dojrzałych kobiet</h3>
 
-                        <div class="mt-6 space-y-6">
+                        <div  x-show="open" class="mt-6 space-y-6">
                             <div class="flex gap-4">
                                 <div class="p-3 bg-purple-100 text-purple-600 rounded-xl">
                                     <x-heroicon-o-heart class="w-6 h-6"/>
