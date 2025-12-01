@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Project;
+use App\Services\ProjectService;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public function __construct(
+        protected ProjectService $projectService
+    ) {}
+
     /**
      * Display the homepage.
      *
@@ -19,6 +24,8 @@ class HomeController extends Controller
             ->orderByDesc('published_at')
             ->take(3)
             ->get();
+
+        $projects = $this->projectService->addTruncatedFields($projects);
 
         return view('home', compact('projects'));
     }

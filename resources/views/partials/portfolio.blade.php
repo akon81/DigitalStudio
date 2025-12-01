@@ -17,8 +17,8 @@
             <x-portfolio-card
                 :category="$project->category?->name ?? ''"
                 :title="$project->title"
-                :excerpt="$project->excerpt"
-                :description="$project->description"
+                :excerpt="$project->truncated_excerpt"
+                :description="$project->truncated_description"
                 :url="$project->url ?? route('portfolio').'#project-' . $project->id"
                 :img="$project->getFirstMediaUrl('images') ?: 'https://via.placeholder.com/600x400'"
                 :tags="$project->techStacks->pluck('name')->toArray()"
