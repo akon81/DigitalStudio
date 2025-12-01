@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
     @vite('resources/css/app.css')
+    {!! CookieConsent::styles() !!}
 </head>
 <body>
     @include('partials.contact-top', ['settings' => app(\App\Settings\GeneralSettings::class)])
@@ -21,6 +22,7 @@
     <x-scrollup/>
 
     @livewireScripts
+    {!! CookieConsent::scripts() !!}
 </body>
 
     @vite('resources/js/app.js')      

@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.3",
         "caresome/filament-auth-designer": "^1.0",
+        "devrabiul/laravel-cookie-consent": "^1.1",
         "filament/filament": "^4.0",
         "filament/spatie-laravel-media-library-plugin": "^4.0",
         "filament/spatie-laravel-settings-plugin": "*",
