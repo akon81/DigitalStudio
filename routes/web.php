@@ -15,7 +15,7 @@ Route::get('/faq', function () {
 
 Route::get('/polityka-prywatnosci', function () {
     return view('privacy-policy');
-})->name('privacy.policy');
+})->name('privacy-policy');
 
 Route::get('/kontakt', function () {
     return view('contact', ['settings' => app(\App\Settings\GeneralSettings::class)]);

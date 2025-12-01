@@ -8,8 +8,9 @@
 			<div class="w-full md:w-auto">
 				<ul class="flex flex-wrap items-center gap-6">
 					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="{{ route('home') }}">Strona główna</a></li>
-					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="#portfolio">Portfolio</a></li>
-					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="#kontakt">Kontakt</a></li>
+					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="{{ route('portfolio') }}">Portfolio</a></li>
+					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="{{ route('privacy-policy') }}">Polityka Prywatności</a></li>
+					<li><a class="text-sm font-bold text-gray-300 hover:text-white" href="{{ route('contact') }}">Kontakt</a></li>
 				</ul>
 			</div>
 		</div>
