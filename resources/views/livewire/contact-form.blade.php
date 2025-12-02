@@ -1,8 +1,8 @@
 <section class="relative">
     <div id="kontakt" class="max-w-4xl px-8 py-16 mx-auto lg:px-12 2xl:px-0">
         <div class="flex flex-col gap-12">
-            <div class="max-w-3xl mx-auto text-center">
-                <h2 class="text-4xl font-bold lg:text-5xl xl:text-6xl text-balance">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold lg:text-4xl xl:text-5xl text-balance">
                     Porozmawiajmy o Twoim projekcie
                 </h2>
                 <p class="mt-4 text-base lg:text-lg text-neutral-600 dark:text-neutral-400 text-balance">
@@ -140,10 +140,10 @@
                     @enderror
 
                     <!-- Przycisk Submit -->
-                    <div>
+                    <div class="flex md:justify-center">
                         <button 
                             type="submit"
-                            class="w-full px-8 py-4 font-semibold text-white transition-all bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="w-full md:w-auto px-8 py-4 font-semibold text-white transition-all bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30 disabled:opacity-50 disabled:cursor-not-allowed"
                             wire:loading.attr="disabled"
                         >
                             <span wire:loading.remove>Wyślij wiadomość</span>

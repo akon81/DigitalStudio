@@ -73,9 +73,9 @@
             </div>
 
             <!-- Formularz kontaktowy: jedna kolumna -->
-            <div class="max-w-4xl mx-auto mt-20">
+            
                 @livewire('contact-form')
-            </div>
+
         </div>
     </section>
 @endsection
