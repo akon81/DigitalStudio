@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Mail\ContactConfirmationMail;
 use App\Mail\ContactFormMail;
 use App\Settings\GeneralSettings;
 use Illuminate\Support\Facades\Mail;
@@ -68,10 +69,19 @@ class ContactForm extends Component
         $this->validate();
 
         try {
+            // Wysyłka wiadomości do administratora
             Mail::to(config('mail.from.address'))
                 ->queue(new ContactFormMail(
                     $this->name,
                     $this->email,
+                    $this->subject,
+                    $this->message
+                ));
+
+            // Wysyłka potwierdzenia do klienta
+            Mail::to($this->email)
+                ->queue(new ContactConfirmationMail(
+                    $this->name,
                     $this->subject,
                     $this->message
                 ));
