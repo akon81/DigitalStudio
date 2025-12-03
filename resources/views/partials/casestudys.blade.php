@@ -15,7 +15,8 @@
                  x-transition:leave="transition ease-in duration-300"
                  x-transition:leave-start="opacity-100"
                  x-transition:leave-end="opacity-0"
-                  class="w-full md:absolute md:inset-0"
+                  class="w-full"
+                  x-bind:class="currentSlideIndex == 1 ? 'relative' : 'absolute inset-0'"
                   x-ref="slide-1"
                   x-cloak>
                 <x-case-study-item
@@ -38,7 +39,8 @@
                  x-transition:leave="transition ease-in duration-300"
                  x-transition:leave-start="opacity-100"
                  x-transition:leave-end="opacity-0"
-                  class="w-full md:absolute md:inset-0"
+                  class="w-full"
+                  x-bind:class="currentSlideIndex == 2 ? 'relative' : 'absolute inset-0'"
                   x-ref="slide-2"
                   x-cloak>
                 <x-case-study-item
@@ -61,7 +63,8 @@
                  x-transition:leave="transition ease-in duration-300"
                  x-transition:leave-start="opacity-100"
                  x-transition:leave-end="opacity-0"
-                  class="w-full md:absolute md:inset-0"
+                  class="w-full"
+                  x-bind:class="currentSlideIndex == 3 ? 'relative' : 'absolute inset-0'"
                   x-ref="slide-3"
                   x-cloak>
                 <x-case-study-item

@@ -111,8 +111,8 @@
    
     <!-- Slides -->
     <div 
-        class="relative w-full min-h-128 md:min-h-128" 
-        x-bind:style="{ height: containerHeight + 'px' }"
+        class="relative w-full overflow-hidden" 
+        x-bind:style="{ minHeight: containerHeight + 'px' }"
         @touchstart="handleTouchStart($event)"
         @touchend="handleTouchEnd($event)"
     >
