@@ -1,4 +1,4 @@
-<section class="py-24 bg-white dark:bg-neutral-950">
+<section class="py-12 bg-white dark:bg-neutral-950">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-20">
             <h2 class="text-4xl font-bold text-neutral-900 dark:text-white tracking-tight">Historie projektów, które robią różnicę</h2>
@@ -15,7 +15,7 @@
                  x-transition:leave="transition ease-in duration-300"
                  x-transition:leave-start="opacity-100"
                  x-transition:leave-end="opacity-0"
-                  class="absolute inset-0 w-full"
+                  class="w-full md:absolute md:inset-0"
                   x-ref="slide-1"
                   x-cloak>
                 <x-case-study-item
@@ -38,7 +38,7 @@
                  x-transition:leave="transition ease-in duration-300"
                  x-transition:leave-start="opacity-100"
                  x-transition:leave-end="opacity-0"
-                  class="absolute inset-0 w-full"
+                  class="w-full md:absolute md:inset-0"
                   x-ref="slide-2"
                   x-cloak>
                 <x-case-study-item
@@ -61,7 +61,7 @@
                  x-transition:leave="transition ease-in duration-300"
                  x-transition:leave-start="opacity-100"
                  x-transition:leave-end="opacity-0"
-                  class="absolute inset-0 w-full"
+                  class="w-full md:absolute md:inset-0"
                   x-ref="slide-3"
                   x-cloak>
                 <x-case-study-item
