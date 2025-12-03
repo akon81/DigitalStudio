@@ -27,7 +27,7 @@
                     goal="Klient potrzebował prostej w obsłudze strony, na której samodzielnie doda produkty, zdjęcia i opisy maszyn, a użytkownicy będą mogli je zamawiać przez wygodny formularz."
                     process="Zaprojektowałem panel do zarządzania ofertą, uprościłem wprowadzanie treści oraz stworzyłem moduł „mini sklepu”, który prowadzi klienta od produktu do zamówienia."
                     result="Firma prezentuje całą ofertę online, przyjmuje zamówienia przez stronę, a ja do dziś zapewniam pełną opiekę techniczną i hosting."
-                    image="assets/img/banner_hero01.jpg"
+                    image="assets/img/mockup_agrostalex_smartfon.jpg"
                     imageAlt="Agro-Stalex"
                 />
             </div>
@@ -51,7 +51,7 @@
                     goal="Klientka prowadzi zajęcia pilates i relaksacyjne – zarówno lokalnie, jak i online. Potrzebowała miejsca, które połączy prezentację oferty z przyszłą strefą premium dla klientek."
                     process="Zaprojektowałem stronę nastawioną na lekkość, delikatność i kobiecy charakter. Dodałem sekcje z wideo, social media, grafiką ruchową oraz przygotowałem strukturę pod przyszły moduł logowania i treści premium."
                     result="Klientka zyskała miejsce, które wzmacnia jej markę, ułatwia komunikację i będzie bazą do rozbudowy o platformę premium w przyszłości."
-                    image="assets/img/banner_hero01.jpg"
+                    image="assets/img/mockup.jpg"
                     imageAlt="Aktywnie dla siebie"
                 />
             </div>
@@ -75,7 +75,7 @@
                     goal="Właściciele potrzebowali strony, która odda klimat hodowli alpak, a jednocześnie umożliwi umawianie wizyt i prezentację oferty pobytowej."
                     process="Stworzyłem wizualnie lekką, ciepłą stronę z naciskiem na fotografie i emocje. Dodałem formularz rezerwacji oraz sekcję prezentującą atrakcje."
                     result="Strona zyskała własny charakter, a właściciele otrzymali narzędzie do kontaktu, promocji i budowania społeczności. Prowadzę dla nich hosting i wsparcie techniczne do dziś."
-                    image="assets/img/banner_hero01.jpg"
+                    image="assets/img/mockup.jpg"
                     imageAlt="Alpakraina"
                 />
             </div>
