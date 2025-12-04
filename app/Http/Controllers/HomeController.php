@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use App\Services\ProjectService;
+use App\Settings\GeneralSettings;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function __construct(
-        protected ProjectService $projectService
+        protected ProjectService $projectService,
+        protected GeneralSettings $settings
     ) {}
 
     /**
@@ -19,10 +21,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $limit = $this->settings->homepage_projects_count > 0 
+            ? $this->settings->homepage_projects_count 
+            : 3;
+
         $projects = Project::with(['category', 'techStacks', 'media'])
             ->whereNotNull('published_at')
             ->orderByDesc('published_at')
-            ->take(3)
+            ->take($limit)
             ->get();
 
         $projects = $this->projectService->addTruncatedFields($projects);
