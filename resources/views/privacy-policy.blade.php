@@ -4,18 +4,14 @@
 
 @section('content')
 
-   <section class="py-20 bg-white overflow-hidden" id="faq-page">
+    <section class="py-20 bg-white overflow-hidden" id="privacy-policy-page">
         <div class="container mx-auto px-4">
-            <!-- Dane kontaktowe -->
-            <div class="max-w-3xl mx-auto mb-20">
-                <div class="mb-12">
-                    <h1 class="text-gray-900 text-center font-black font-heading text-4xl md:text-6xl mb-6">Polityka prywatności</h1>
-                    <p class="text-xl text-gray-500 font-bold text-center">Przetwarzanie danych osobowych – najważniejsze informacje</p>
-                </div>
-
-                <div class="max-w-3xl mx-auto py-12 px-6 text-gray-800">
-
-    <div class="space-y-8">
+             <div class="mb-16 text-center">
+                <h1 class="text-gray-900 font-black font-heading text-4xl md:text-5xl mb-6">Polityka prywatności</h1>
+                <p class="md:text-xl text-lg text-gray-500 font-bold max-w-2xl mx-auto">Przetwarzanie danych osobowych – najważniejsze informacje</p>
+            </div>
+           
+            <div class="max-w-4xl mx-auto space-y-8">
 
         <div>
             <h3 class="text-xl font-semibold mb-2 text-gray-900">1. Administrator danych</h3>
@@ -135,9 +131,7 @@
         </div>
 
     </div>
-</div>
-                </div>
-            </div>
+</div> 
         </div>
     </section>
 @endsection
