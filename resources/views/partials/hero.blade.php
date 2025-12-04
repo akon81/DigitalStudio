@@ -14,7 +14,7 @@
 			</div>
 			<div class="relative max-w-lg">
 				<span class="inline-block mb-3 text-sm text-blue-500 font-bold uppercase tracking-widest">DigitWebStudio</span>
-				<h1 class="font-heading mb-6 text-5xl text-gray-900 font-black tracking-tight">
+				<h1 class="font-heading mb-6 md:text-5xl text-4xl leading-tight text-gray-900 font-black tracking-tight">
 				<span>Strony i aplikacje</span>
 				<span class="text-blue-500">które będą działać dla Ciebie</span>
 				</h1>

@@ -1,4 +1,4 @@
-<section class="py-20 bg-white">
+<section class="py-10 md:py-20 bg-white">
     <div class="max-w-6xl mx-auto px-6">
 
         <div class="text-center mb-14">
@@ -10,7 +10,7 @@
             </p>
         </div>
 
-        <div class="relative grid gap-12 md:grid-cols-4">
+        <div class="relative grid md:gap-12 gap-6 md:grid-cols-4">
             <!-- Linia łącząca (tylko desktop) -->
             <div class="hidden md:block absolute top-[46px] left-0 w-full h-0.5 bg-blue-100 -z-10"></div>
 

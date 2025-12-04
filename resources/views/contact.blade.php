@@ -3,18 +3,14 @@
 @section('title', 'Kontakt')
 
 @section('content')
-    <section class="py-20 bg-white overflow-hidden" id="contact-page">
+    <section class="py-20 bg-white overflow-hidden" id="faq-page">
         <div class="container mx-auto px-4">
-            <!-- Dane kontaktowe -->
-            <div class="max-w-2xl mx-auto mb-12">
-                <div class="mb-12">
-                    <h1 class="text-gray-900 text-center font-black font-heading text-4xl md:text-6xl mb-6">Zapraszam do kontaktu</h1>
-                    <p class="text-xl text-gray-500 font-bold">Potrzebujesz wsparcia przy swoim projekcie? Skontaktuj się ze mną</p>
-                </div>
-
+             <div class="mb-16 text-center">
+                <h1 class="text-gray-900 font-black font-heading text-4xl md:text-5xl mb-6">Zapraszam do kontaktu</h1>
+                <p class="md:text-xl text-lg text-gray-500 font-bold max-w-2xl mx-auto">Potrzebujesz wsparcia przy swoim projekcie? Skontaktuj się ze mną</p>
             </div>
 
-            <div class="max-w-5xl mx-auto mb-20">
+            <div class="max-w-4xl mx-auto">
                 <div id="contact-info" class="relative overflow-hidden border border-gray-100 hover:border-gray-200 rounded-3xl p-8 md:p-12 bg-center bg-cover" style="background-image: url('/assets/img/banner_contact01.jpg');">
                     <div class="absolute inset-0 md:bg-black/1 bg-black/60"></div>
                     <div class="relative z-10">

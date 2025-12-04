@@ -23,11 +23,11 @@
 @endphp
 
 <div id="{{ $id }}">
-    <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
         
         <div class="{{ $reverse ? 'md:order-2' : '' }}">
-            <span class="text-sm font-semibold {{ $colors['label'] }} uppercase tracking-wide">{{ $label }}</span>
-            <h3 class="text-3xl font-bold text-neutral-900 dark:text-white mt-2">{{ $title }}</h3>
+            <span class="text-base font-semibold {{ $colors['label'] }} uppercase tracking-wide">{{ $label }}</span>
+            <h3 class="text-xl md:text-2xl font-bold text-neutral-900 dark:text-white mt-2">{{ $title }}</h3>
 
             <div class="mt-6 space-y-6">
                 <div class="flex gap-4">
@@ -36,7 +36,7 @@
                     </div>
                     <div>
                         <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Wyjściowy cel</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400">
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base">
                             {{ $goal }}
                         </p>
                     </div>
@@ -48,7 +48,7 @@
                     </div>
                     <div>
                         <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Proces</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400">
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base">
                             {{ $process }}
                         </p>
                     </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div>
                         <h4 class="font-semibold text-neutral-800 dark:text-neutral-200">Efekt</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400">
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base">
                             {{ $result }}
                         </p>
                     </div>

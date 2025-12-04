@@ -3,20 +3,15 @@
 @section('title', 'FAQ - Najczęściej zadawane pytania')
 
 @section('content')
-   <section class="relative py-20 overflow-hidden bg-white dark:bg-neutral-950" id="faq-page">
-        <div class="max-w-4xl px-8 py-16 mx-auto lg:px-12 2xl:px-0">
-            <!-- Nagłówek -->
-            <div class="max-w-3xl mx-auto mb-16 text-center">
-                <h1 class="text-4xl font-bold lg:text-5xl xl:text-6xl text-neutral-900 dark:text-white text-balance">
-                    Najczęściej zadawane pytania
-                </h1>
-                <p class="mt-4 text-base lg:text-lg text-neutral-600 dark:text-neutral-400 text-balance">
-                    Odpowiedzi na najważniejsze pytania dotyczące współpracy i tworzenia stron
-                </p>
+    <section class="py-20 bg-white overflow-hidden" id="faq-page">
+        <div class="container mx-auto px-4">
+             <div class="mb-16 text-center">
+                <h1 class="text-gray-900 font-black font-heading text-4xl md:text-5xl mb-6">Najczęściej zadawane pytania</h1>
+                <p class="md:text-xl text-lg text-gray-500 font-bold max-w-2xl mx-auto">Odpowiedzi na najważniejsze pytania dotyczące współpracy i tworzenia stron</p>
             </div>
 
-            <div x-data="{ openItem: null }">
-
+            <div class="max-w-4xl mx-auto">
+ 
             <div x-data="{ openItem: null }">
                 <!-- Accordion list -->
                 <div class="space-y-4">
@@ -73,8 +68,7 @@
         </div>
 
     </div>
-
-    </div>
+            </div>
         </div>
     </section>
 @endsection

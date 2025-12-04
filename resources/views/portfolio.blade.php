@@ -3,11 +3,11 @@
 @section('title', 'Portfolio projektów')
 
 @section('content')
-    <section class="py-20 bg-gray-50 overflow-hidden" id="portfolio-page">       
+    <section class="py-20 bg-white overflow-hidden" id="portfolio-page">       
         <div class="container mx-auto px-4">
             <div class="mb-16 text-center">
-                <h1 class="text-gray-900 font-black font-heading text-5xl md:text-6xl mb-6">Portfolio projektów</h1>
-                <p class="text-xl text-gray-500 font-bold max-w-2xl mx-auto">Portfolio moich realizacji - od prostych stron po zaawansowane aplikacje webowe.</p>
+                <h1 class="text-gray-900 font-black font-heading text-4xl md:text-5xl mb-6">Portfolio projektów</h1>
+                <p class="md:text-xl text-lg text-gray-500 font-bold max-w-2xl mx-auto">Portfolio moich realizacji - od prostych stron po zaawansowane aplikacje webowe.</p>
             </div>
 
             <div class="mb-12 flex flex-wrap justify-center gap-3">
