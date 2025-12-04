@@ -18,7 +18,7 @@
             </div>
             <h3 class="text-gray-900 font-black font-heading text-2xl mb-3 text-center">{{ $title }}</h3>
             <p class="text-gray-500 font-bold mb-4 flex-1">{{ $excerpt }}</p>
-            <a class="inline-flex items-center text-blue-500 font-bold hover:text-blue-600" href="{{ $url }}">
+            <a class="inline-flex items-center text-blue-500 font-bold hover:text-blue-600" href="{{ $url ? (str_starts_with($url, 'http') ? $url : 'https://' . $url) : '#' }}" target="_blank" rel="noopener noreferrer">
                 Zobacz projekt
                 <svg class="ml-2" width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.5 10H15.5M15.5 10L10.5 5M15.5 10L10.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

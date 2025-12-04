@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Project;
 use App\Services\ProjectService;
 use App\Settings\GeneralSettings;
@@ -33,6 +34,8 @@ class HomeController extends Controller
 
         $projects = $this->projectService->addTruncatedFields($projects);
 
-        return view('home', compact('projects'));
+        $categories = Category::orderBy('name')->get();
+
+        return view('home', compact('projects', 'categories'));
     }
 }

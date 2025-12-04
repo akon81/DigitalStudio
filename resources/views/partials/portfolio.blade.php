@@ -7,9 +7,9 @@
     </div>
     <div class="mb-12 flex flex-wrap justify-center gap-3">
       <x-portfolio-filter-btn category="wszystkie" :active="true">Wszystkie</x-portfolio-filter-btn>
-      <x-portfolio-filter-btn category="Strony WWW">Strony WWW</x-portfolio-filter-btn>
-      <x-portfolio-filter-btn category="Aplikacje Web">Aplikacje Web</x-portfolio-filter-btn>
-      <x-portfolio-filter-btn category="E-commerce">E-commerce</x-portfolio-filter-btn>
+      @foreach($categories as $category)
+        <x-portfolio-filter-btn :category="$category->name">{{ $category->name }}</x-portfolio-filter-btn>
+      @endforeach
     </div>
     <div class="flex flex-wrap -m-4" id="portfolio-grid">
       @if(isset($projects) && $projects->count() > 0)
