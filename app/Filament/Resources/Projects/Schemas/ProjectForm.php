@@ -76,7 +76,7 @@ class ProjectForm
             ])->columnSpanFull(),
 
             \Filament\Schemas\Components\Section::make('Studium przypadku')
-                ->description('Opcjonalne pola dla projektów wyświetlanych w sekcji Studiom przypadku')
+                ->description('Opcjonalne pola dla projektów wyświetlanych w sekcji Studium przypadku')
                 ->schema([
                     \Filament\Forms\Components\Toggle::make('is_case_study')
                         ->label('Czy to jest Studium przypadku?')

@@ -28,7 +28,7 @@ class ProjectsTable
                     ->date()
                     ->sortable(),
                     \Filament\Tables\Columns\IconColumn::make('is_case_study')
-                    ->label('Studiom przypadku')
+                    ->label('Studium przypadku')
                     ->boolean()
                     ->sortable(),
             ])
@@ -37,10 +37,10 @@ class ProjectsTable
                     ->label('Kategoria')
                     ->relationship('category', 'name'),
                 \Filament\Tables\Filters\TernaryFilter::make('is_case_study')
-                    ->label('Studiom przypadku')
+                    ->label('Studium przypadku')
                     ->boolean()
-                    ->trueLabel('Tylko Studiom przypadku')
-                    ->falseLabel('Bez Studiom przypadku')
+                    ->trueLabel('Tylko Studium przypadku')
+                    ->falseLabel('Bez Studium przypadku')
                     ->native(false),
             ])
             ->recordActions([
