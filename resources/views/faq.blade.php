@@ -16,43 +16,16 @@
                 <!-- Accordion list -->
                 <div class="space-y-4">
 
-                    <x-faq-item :index="1">
-                        <x-slot:question>Ile kosztuje stworzenie strony internetowej?</x-slot:question>
-                        <x-slot:answer>
-                            Cena zależy od zakresu projektu, ilości podstron oraz funkcjonalności. Proste strony zaczynają się od 2000 złotych,
-                            natomiast bardziej rozbudowane rozwiązania wyceniam indywidualnie po analizie Twoich potrzeb.
-                        </x-slot:answer>
-                    </x-faq-item>
-
-                    <x-faq-item :index="2">
-                        <x-slot:question>Jak długo trwa realizacja projektu?</x-slot:question>
-                        <x-slot:answer>
-                            Standardowy czas realizacji to 2–4 tygodnie. Zależy to od złożoności strony
-                            oraz szybkości akceptacji kolejnych etapów.
-                        </x-slot:answer>
-                    </x-faq-item>
-
-                    <x-faq-item :index="3">
-                        <x-slot:question>Czy mogę samodzielnie edytować treści?</x-slot:question>
-                        <x-slot:answer>
-                            Oczywiście. Strony tworzę tak, aby każdy klient mógł sam dodawać teksty,
-                            zdjęcia lub zmiany w CMS.
-                        </x-slot:answer>
-                    </x-faq-item>
-
-                    <x-faq-item :index="4">
-                        <x-slot:question>Czy pomożesz z domeną i hostingiem?</x-slot:question>
-                        <x-slot:answer>
-                            Tak — mogę polecić sprawdzone hostingi oraz pomóc w pełnej konfiguracji domeny.
-                        </x-slot:answer>
-                    </x-faq-item>
-
-                    <x-faq-item :index="5">
-                        <x-slot:question>Czy oferujesz wsparcie po wdrożeniu?</x-slot:question>
-                        <x-slot:answer>
-                            Oferuję zarówno wsparcie techniczne, jak i możliwość dalszego rozwoju strony lub sklepu.
-                        </x-slot:answer>
-                    </x-faq-item>
+                    @forelse($faqs as $index => $faq)
+                        <x-faq-item :index="$index + 1">
+                            <x-slot:question>{{ $faq->question }}</x-slot:question>
+                            <x-slot:answer>{!! nl2br(e($faq->answer)) !!}</x-slot:answer>
+                        </x-faq-item>
+                    @empty
+                        <div class="text-center py-8">
+                            <p class="text-neutral-600 dark:text-neutral-400">Brak pytań do wyświetlenia.</p>
+                        </div>
+                    @endforelse
 
         </div>
 
