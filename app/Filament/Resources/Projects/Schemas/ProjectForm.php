@@ -71,6 +71,43 @@ class ProjectForm
                     ->label('Data publikacji')
                     ->required(),
             ])->columnSpanFull(),
+
+            \Filament\Schemas\Components\Section::make('Case Study')
+                ->description('Opcjonalne pola dla projektów wyświetlanych w sekcji Case Study')
+                ->schema([
+                    \Filament\Forms\Components\Toggle::make('is_case_study')
+                        ->label('Czy to jest Case Study?')
+                        ->live()
+                        ->default(false),
+
+                    \Filament\Forms\Components\TextInput::make('case_study_subtitle')
+                        ->label('Podtytuł Case Study')
+                        ->maxLength(255)
+                        ->visible(fn ($get) => $get('is_case_study')),
+
+                    \Filament\Forms\Components\Textarea::make('case_study_goal')
+                        ->label('Cel projektu')
+                        ->rows(4)
+                        ->visible(fn ($get) => $get('is_case_study')),
+
+                    \Filament\Forms\Components\Textarea::make('case_study_process')
+                        ->label('Przebieg projektu')
+                        ->rows(4)
+                        ->visible(fn ($get) => $get('is_case_study')),
+
+                    \Filament\Forms\Components\Textarea::make('case_study_result')
+                        ->label('Efekt projektu')
+                        ->rows(4)
+                        ->visible(fn ($get) => $get('is_case_study')),
+
+                    \Filament\Forms\Components\SpatieMediaLibraryFileUpload::make('case_study')
+                        ->label('Zdjęcie dla Case Study')
+                        ->collection('case_study')
+                        ->image()
+                        ->conversion('thumb')
+                        ->visible(fn ($get) => $get('is_case_study')),
+                ])->columnSpanFull()
+                ->collapsible(),
         ]);
     }
 }

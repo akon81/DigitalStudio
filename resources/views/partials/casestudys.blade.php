@@ -1,3 +1,11 @@
+@php
+    $caseStudies = \App\Models\Project::where('is_case_study', true)
+        ->whereNotNull('published_at')
+        ->orderBy('published_at', 'desc')
+        ->take(10)
+        ->get();
+@endphp
+
 <section class="py-10 md:py-20 bg-white dark:bg-neutral-950">
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-20">
@@ -7,79 +15,49 @@
             </p>
         </div>
 
-        <x-case-carousel :cases="[1, 2, 3]">
-              <div x-show="currentSlideIndex == 1" 
-                 x-transition:enter="transition ease-out duration-500"
-                 x-transition:enter-start="opacity-0"
-                 x-transition:enter-end="opacity-100"
-                 x-transition:leave="transition ease-in duration-300"
-                 x-transition:leave-start="opacity-100"
-                 x-transition:leave-end="opacity-0"
-                  class="w-full"
-                  x-bind:class="currentSlideIndex == 1 ? 'relative' : 'absolute inset-0'"
-                  x-ref="slide-1"
-                  x-cloak>
-                <x-case-study-item
-                    id="case1"
-                    label="Agro-Stalex"
-                    title="Cyfrowa transformacja producenta maszyn rolniczych"
-                    color="green"
-                    goal="Klient potrzebował prostej w obsłudze strony, na której samodzielnie doda produkty, zdjęcia i opisy maszyn, a użytkownicy będą mogli je zamawiać przez wygodny formularz."
-                    process="Zaprojektowałem panel do zarządzania ofertą, uprościłem wprowadzanie treści oraz stworzyłem moduł „mini sklepu”, który prowadzi klienta od produktu do zamówienia."
-                    result="Firma prezentuje całą ofertę online, przyjmuje zamówienia przez stronę, a ja do dziś zapewniam pełną opiekę techniczną i hosting."
-                    image="assets/img/mockup_agrostalex_smartfon.jpg"
-                    imageAlt="Agro-Stalex"
-                />
-            </div>
+        @if($caseStudies->isNotEmpty())
+            @php
+                $colors = ['green', 'purple', 'orange'];
+            @endphp
 
-              <div x-show="currentSlideIndex == 2"
-                 x-transition:enter="transition ease-out duration-500"
-                 x-transition:enter-start="opacity-0"
-                 x-transition:enter-end="opacity-100"
-                 x-transition:leave="transition ease-in duration-300"
-                 x-transition:leave-start="opacity-100"
-                 x-transition:leave-end="opacity-0"
-                  class="w-full"
-                  x-bind:class="currentSlideIndex == 2 ? 'relative' : 'absolute inset-0'"
-                  x-ref="slide-2"
-                  x-cloak>
-                <x-case-study-item
-                    id="case2"
-                    label="Aktywnie dla siebie"
-                    title="Platforma wspierająca formę i zdrowie dojrzałych kobiet"
-                    color="purple"
-                    goal="Klientka prowadzi zajęcia pilates i relaksacyjne – zarówno lokalnie, jak i online. Potrzebowała miejsca, które połączy prezentację oferty z przyszłą strefą premium dla klientek."
-                    process="Zaprojektowałem stronę nastawioną na lekkość, delikatność i kobiecy charakter. Dodałem sekcje z wideo, social media, grafiką ruchową oraz przygotowałem strukturę pod przyszły moduł logowania i treści premium."
-                    result="Klientka zyskała miejsce, które wzmacnia jej markę, ułatwia komunikację i będzie bazą do rozbudowy o platformę premium w przyszłości."
-                    image="assets/img/mockup.jpg"
-                    imageAlt="Aktywnie dla siebie"
-                />
-            </div>
+            <x-case-carousel :cases="range(1, $caseStudies->count())">
+                @foreach($caseStudies as $index => $project)
+                    @php
+                        $slideNumber = $index + 1;
+                        $color = $colors[$index % count($colors)];
+                        $caseStudyImage = $project->getFirstMediaUrl('case_study', 'thumb') ?: $project->getFirstMediaUrl('images', 'thumb');
+                    @endphp
 
-              <div x-show="currentSlideIndex == 3"
-                 x-transition:enter="transition ease-out duration-500"
-                 x-transition:enter-start="opacity-0"
-                 x-transition:enter-end="opacity-100"
-                 x-transition:leave="transition ease-in duration-300"
-                 x-transition:leave-start="opacity-100"
-                 x-transition:leave-end="opacity-0"
-                  class="w-full"
-                  x-bind:class="currentSlideIndex == 3 ? 'relative' : 'absolute inset-0'"
-                  x-ref="slide-3"
-                  x-cloak>
-                <x-case-study-item
-                    id="case3"
-                    label="Alpakraina"
-                    title="Strona miejsca, które żyje swoją historią"
-                    color="orange"
-                    goal="Właściciele potrzebowali strony, która odda klimat hodowli alpak, a jednocześnie umożliwi umawianie wizyt i prezentację oferty pobytowej."
-                    process="Stworzyłem wizualnie lekką, ciepłą stronę z naciskiem na fotografie i emocje. Dodałem formularz rezerwacji oraz sekcję prezentującą atrakcje."
-                    result="Strona zyskała własny charakter, a właściciele otrzymali narzędzie do kontaktu, promocji i budowania społeczności. Prowadzę dla nich hosting i wsparcie techniczne do dziś."
-                    image="assets/img/mockup.jpg"
-                    imageAlt="Alpakraina"
-                />
+                    <div x-show="currentSlideIndex == {{ $slideNumber }}" 
+                         x-transition:enter="transition ease-out duration-500"
+                         x-transition:enter-start="opacity-0"
+                         x-transition:enter-end="opacity-100"
+                         x-transition:leave="transition ease-in duration-300"
+                         x-transition:leave-start="opacity-100"
+                         x-transition:leave-end="opacity-0"
+                         class="w-full"
+                         x-bind:class="currentSlideIndex == {{ $slideNumber }} ? 'relative' : 'absolute inset-0'"
+                         x-ref="slide-{{ $slideNumber }}"
+                         x-cloak>
+                        <x-case-study-item
+                            id="case{{ $slideNumber }}"
+                            label="{{ $project->title }}"
+                            title="{{ $project->case_study_subtitle }}"
+                            color="{{ $color }}"
+                            goal="{{ $project->case_study_goal }}"
+                            process="{{ $project->case_study_process }}"
+                            result="{{ $project->case_study_result }}"
+                            image="{{ $caseStudyImage }}"
+                            imageAlt="{{ $project->title }}"
+                        />
+                    </div>
+                @endforeach
+            </x-case-carousel>
+        @else
+            <div class="text-center py-12">
+                <p class="text-neutral-600 dark:text-neutral-400">Brak projektów case study do wyświetlenia.</p>
             </div>
-        </x-case-carousel>
+        @endif
 
     </div>
 </section>

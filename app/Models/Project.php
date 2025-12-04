@@ -21,7 +21,20 @@ class Project extends Model implements HasMedia
         'url',
         'category_id',
         'published_at',
+        'is_case_study',
+        'case_study_goal',
+        'case_study_process',
+        'case_study_result',
+        'case_study_subtitle',
     ];
+
+    protected function casts(): array
+    {
+        return [
+            'published_at' => 'datetime',
+            'is_case_study' => 'boolean',
+        ];
+    }
 
     public function category()
     {
@@ -36,6 +49,9 @@ class Project extends Model implements HasMedia
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection('images')
+            ->useDisk('public_images');
+
+        $this->addMediaCollection('case_study')
             ->useDisk('public_images');
     }
 
