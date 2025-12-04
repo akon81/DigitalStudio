@@ -1,6 +1,6 @@
 @props(['question', 'answer', 'index'])
 
-<div class="overflow-hidden transition-all bg-white border shadow-sm dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 rounded-2xl hover:shadow-md">
+<div class="overflow-hidden transition-all bg-white border dark:bg-neutral-900 border-neutral-200 dark:border-neutral-800 rounded-3xl hover:shadow-sm">
     <button 
         class="flex items-center justify-between w-full p-6 text-left transition-colors hover:bg-neutral-50 dark:hover:bg-neutral-800/50"
         @click="openItem === {{ $index }} ? openItem = null : openItem = {{ $index }}"
