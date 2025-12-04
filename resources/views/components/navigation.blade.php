@@ -9,6 +9,13 @@
     ],
 ])
 
+@php
+    $routeName = request()->route()->getName();
+    $isHome = $routeName === 'home';
+    $isContact = $routeName === 'contact';
+    $buttonUrl = ($isHome || $isContact) ? '#kontakt' : route('contact');
+@endphp
+
 <section class="pt-6 bg-white overflow-hidden" x-data="{ mobileNavOpen: false }">
 	<div class="container mx-auto px-4">
 		<div class="mb-6">
