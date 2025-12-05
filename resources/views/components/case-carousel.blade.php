@@ -88,7 +88,7 @@
     <!-- Previous button (hidden on small screens) -->
     <button 
         type="button" 
-        class="absolute left-0 top-1/2 z-20 hidden md:flex rounded-full -translate-y-1/2 -translate-x-1/2 items-center justify-center bg-white/80 dark:bg-neutral-800/80 p-3 ml-4 text-neutral-900 dark:text-white transition hover:bg-white dark:hover:bg-neutral-800 shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30" 
+        class="absolute -left-6 lg:-left-12 xl:-left-16 top-1/2 z-20 hidden lg:flex rounded-full -translate-y-1/2 items-center justify-center bg-white/90 dark:bg-neutral-800/90 p-3 text-neutral-900 dark:text-white transition-all hover:bg-neutral-100 dark:hover:bg-neutral-700 hover:scale-105 shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30" 
         aria-label="previous slide" 
         x-on:click="previous(); setAutoplayInterval(autoplayIntervalTime)"
     >
@@ -100,7 +100,7 @@
     <!-- Next button (hidden on small screens) -->
     <button 
         type="button" 
-        class="absolute right-0 top-1/2 z-20 hidden md:flex rounded-full -translate-y-1/2 translate-x-1/2 items-center justify-center bg-white/80 dark:bg-neutral-800/80 p-3 mr-4 text-neutral-900 dark:text-white transition hover:bg-white dark:hover:bg-neutral-800 shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30" 
+        class="absolute -right-6 lg:-right-12 xl:-right-16 top-1/2 z-20 hidden lg:flex rounded-full -translate-y-1/2 items-center justify-center bg-white/90 dark:bg-neutral-800/90 p-3 text-neutral-900 dark:text-white transition-all hover:bg-neutral-100 dark:hover:bg-neutral-700 hover:scale-105 shadow-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30" 
         aria-label="next slide" 
         x-on:click="next(); setAutoplayInterval(autoplayIntervalTime)"
     >

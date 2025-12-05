@@ -23,11 +23,11 @@
 @endphp
 
 <div id="{{ $id }}">
-    <div class="grid md:grid-cols-[400px_1fr] lg:grid-cols-[480px_1fr] xl:grid-cols-[560px_1fr] gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">
+    <div class="grid lg:grid-cols-[480px_1fr] xl:grid-cols-[560px_1fr] gap-6 lg:gap-12 xl:gap-16 items-center">
         
-        <div class="{{ $reverse ? 'md:order-2' : '' }}">
+        <div class="{{ $reverse ? 'lg:order-2' : '' }}">
             <span class="text-sm sm:text-base lg:text-lg font-semibold {{ $colors['label'] }} uppercase tracking-wide">{{ $label }}</span>
-            <h3 class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-neutral-900 dark:text-white mt-2">{{ $title }}</h3>
+            <h3 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-neutral-900 dark:text-white mt-2">{{ $title }}</h3>
 
             <div class="mt-4 sm:mt-6 lg:mt-8 space-y-4 sm:space-y-6 lg:space-y-8">
                 <div class="flex gap-3 sm:gap-4 lg:gap-5">
@@ -35,8 +35,8 @@
                         <x-heroicon-o-light-bulb class="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7"/>
                     </div>
                     <div class="min-w-0">
-                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 text-sm sm:text-base lg:text-lg">Wyjściowy cel</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400 text-sm lg:text-base">
+                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 text-sm sm:text-base md:text-lg lg:text-xl">Wyjściowy cel</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base lg:text-lg">
                             {{ $goal }}
                         </p>
                     </div>
@@ -47,8 +47,8 @@
                         <x-heroicon-o-cog-6-tooth class="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7"/>
                     </div>
                     <div class="min-w-0">
-                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 text-sm sm:text-base lg:text-lg">Proces</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400 text-sm lg:text-base">
+                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 text-sm sm:text-base md:text-lg lg:text-xl">Proces</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base lg:text-lg">
                             {{ $process }}
                         </p>
                     </div>
@@ -59,8 +59,8 @@
                         <x-heroicon-o-check-circle class="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7"/>
                     </div>
                     <div class="min-w-0">
-                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 text-sm sm:text-base lg:text-lg">Efekt</h4>
-                        <p class="text-neutral-600 dark:text-neutral-400 text-sm lg:text-base">
+                        <h4 class="font-semibold text-neutral-800 dark:text-neutral-200 text-sm sm:text-base md:text-lg lg:text-xl">Efekt</h4>
+                        <p class="text-neutral-600 dark:text-neutral-400 text-sm md:text-base lg:text-lg">
                             {{ $result }}
                         </p>
                     </div>
@@ -68,7 +68,7 @@
             </div>
         </div>
 
-        <div class="relative {{ $reverse ? 'md:order-1' : '' }} min-w-0">
+        <div class="relative {{ $reverse ? 'lg:order-1' : '' }} min-w-0 max-w-[480px] mx-auto lg:mx-0 lg:ml-auto">
             <div class="rounded-2xl overflow-hidden shadow-xl">
                 <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto object-cover">
             </div>
