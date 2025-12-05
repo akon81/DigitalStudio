@@ -70,7 +70,7 @@
 
         <div class="relative {{ $reverse ? 'lg:order-1' : '' }} min-w-0 max-w-[480px] mx-auto lg:mx-0 lg:ml-auto">
             <div class="rounded-2xl overflow-hidden shadow-xl">
-                <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto object-cover">
+                <img src="{{ $image }}" alt="{{ $imageAlt }}" class="w-full h-auto object-cover" loading="lazy">
             </div>
         </div>
 

@@ -1,1 +1,1 @@
-<a href="{{ route('home') }}"><img class="w-60 h-auto" src="assets/img/{{ $file ?? 'ds_logo.png' }}" alt="logo"/></a>
+<a href="{{ route('home') }}"><img class="w-60 h-auto" src="assets/img/{{ $file ?? 'ds_logo.png' }}" alt="logo" loading="eager"/></a>

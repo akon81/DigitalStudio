@@ -1,9 +1,9 @@
 # 🎯 Propozycje wdrożeń dla DigitalStudio
 
 ## 1. 🔍 SEO i Meta Tagi
-- [v] Brak meta description, Open Graph i Twitter Cards
-- [v] Brak strukturalnych danych (Schema.org) dla lepszego SEO
-- [v] Dodanie dynamicznych meta tagów dla każdej strony
+- [x] Brak meta description, Open Graph i Twitter Cards
+- [x] Brak strukturalnych danych (Schema.org) dla lepszego SEO
+- [x] Dodanie dynamicznych meta tagów dla każdej strony
 
 ## 2. 💬 Sekcja Testimonials/Opinie Klientów
 - [ ] Karuzela z opiniami klientów na stronie głównej
@@ -25,9 +25,9 @@
 - [ ] Budowanie bazy mailingowej klientów
 
 ## 6. ⏳ Loadery/Animacje Ładowania
-- [ ] Skeleton loadery dla karuzeli projektów
-- [ ] Smooth transitions przy ładowaniu strony
-- [ ] Lazy loading obrazów
+- [x] Skeleton loadery dla karuzeli projektów
+- [x] Smooth transitions przy ładowaniu strony
+- [x] Lazy loading obrazów
 
 ## 7. 🍞 Breadcrumbs (Okruszki)
 - [ ] Nawigacja breadcrumb na podstronach

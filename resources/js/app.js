@@ -98,6 +98,45 @@
         }
       });
     });
+
+    // Lazy Loading Images with Blur Effect
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+      const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            
+            // Add blur effect initially
+            img.classList.add('blur-up');
+            
+            // When image loads, remove blur and add loaded class
+            img.addEventListener('load', () => {
+              img.classList.add('loaded');
+              img.classList.remove('blur-up');
+            });
+            
+            // If image is already cached, trigger immediately
+            if (img.complete) {
+              img.classList.add('loaded');
+              img.classList.remove('blur-up');
+            }
+            
+            observer.unobserve(img);
+          }
+        });
+      }, {
+        rootMargin: '50px' // Start loading 50px before image enters viewport
+      });
+      
+      lazyImages.forEach(img => imageObserver.observe(img));
+    } else {
+      // Fallback for browsers without IntersectionObserver
+      lazyImages.forEach(img => {
+        img.classList.add('loaded');
+      });
+    }
   };
 
   if (document.readyState === "loading") {
