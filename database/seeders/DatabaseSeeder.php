@@ -25,5 +25,6 @@ class DatabaseSeeder extends Seeder
     $this->call(ProjectSeeder::class);
     $this->call(GeneralSettingsSeeder::class);
     $this->call(AdminUserSeeder::class);
+    $this->call(FaqSeeder::class);
     }
 }
