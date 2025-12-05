@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Faq;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class FaqController extends Controller
 {
@@ -14,10 +14,13 @@ class FaqController extends Controller
      */
     public function index()
     {
-        $faqs = Faq::where('is_active', true)
-            ->orderBy('order')
-            ->get();
-        
+        // Cache FAQs for 1 hour
+        $faqs = Cache::remember('faqs.active', 3600, function () {
+            return Faq::where('is_active', true)
+                ->orderBy('order')
+                ->get();
+        });
+
         return view('faq', compact('faqs'));
     }
 }

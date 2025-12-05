@@ -60,10 +60,10 @@
 - [ ] Keyboard navigation improvements
 
 ## 14. ⚡ Performance Optimization
-- [ ] Lazy loading dla obrazów
-- [ ] WebP format dla zdjęć
-- [ ] Minifikacja CSS/JS
-- [ ] Caching strategia
+- [x] Lazy loading dla obrazów
+- [x] WebP format dla zdjęć
+- [x] Minifikacja CSS/JS
+- [x] Caching strategia
 
 ## 15. 📈 Analytics Dashboard
 - [ ] Google Analytics / Plausible integration

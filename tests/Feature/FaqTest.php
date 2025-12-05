@@ -5,7 +5,9 @@ declare(strict_types=1);
 use App\Models\Faq;
 use App\Models\User;
 
-use function Pest\Laravel\{actingAs, assertDatabaseHas, get};
+use function Pest\Laravel\actingAs;
+use function Pest\Laravel\assertDatabaseHas;
+use function Pest\Laravel\get;
 
 test('faq page displays active faqs in order', function () {
     $faq1 = Faq::factory()->create([
@@ -51,15 +53,13 @@ test('admin can create faq', function () {
 
     actingAs($user);
 
-    $faqData = [
-        'question' => 'Test Question?',
-        'answer' => 'Test Answer',
-        'order' => 10,
-        'is_active' => true,
-    ];
-
     \Livewire\Livewire::test(\App\Filament\Resources\Faqs\Pages\CreateFaq::class)
-        ->fillForm($faqData)
+        ->fillForm([
+            'question' => 'Test Question?',
+            'answer' => 'Test Answer',
+            'order' => 10,
+            'is_active' => true,
+        ])
         ->call('create')
         ->assertHasNoErrors();
 
@@ -140,4 +140,3 @@ test('faqs are sorted by order ascending', function () {
 
     expect($faqs->pluck('order')->toArray())->toBe([1, 2, 3]);
 });
-

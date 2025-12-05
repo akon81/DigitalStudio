@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
 use App\Models\Category;
+use App\Models\Project;
 use App\Services\ProjectService;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class PortfolioController extends Controller
 {
@@ -15,14 +15,20 @@ class PortfolioController extends Controller
 
     public function index()
     {
-        $projects = Project::with(['category', 'techStacks', 'media'])
-            ->whereNotNull('published_at')
-            ->orderByDesc('published_at')
-            ->get();
+        // Cache all projects for 1 hour
+        $projects = Cache::remember('portfolio.projects.all', 3600, function () {
+            $projects = Project::with(['category', 'techStacks', 'media'])
+                ->whereNotNull('published_at')
+                ->orderByDesc('published_at')
+                ->get();
 
-        $projects = $this->projectService->addTruncatedFields($projects);
+            return $this->projectService->addTruncatedFields($projects);
+        });
 
-        $categories = Category::orderBy('name')->get();
+        // Cache categories for 1 hour
+        $categories = Cache::remember('categories.all', 3600, function () {
+            return Category::orderBy('name')->get();
+        });
 
         return view('portfolio', compact('projects', 'categories'));
     }

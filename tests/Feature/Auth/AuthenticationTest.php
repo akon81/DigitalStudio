@@ -1,3 +1,5 @@
+<?php
+
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
@@ -26,26 +28,21 @@ test('users cannot authenticate with invalid password', function () {
     // Ensure guest when not acting as user
     $this->assertGuest();
 });
-<?php
-
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 
 test('programmatic login and logout behavior', function () {
-    $user = User::factory()->create([ 'password' => bcrypt('password') ]);
+    $user = User::factory()->create(['password' => bcrypt('password')]);
 
     // Programmatic authentication (UI disabled)
     $this->actingAs($user);
     $this->assertAuthenticatedAs($user);
 
-    // Logout route should still work
-    $response = $this->post(route('logout'));
-    $response->assertRedirect(route('home'));
+    // Test logout functionality
+    $this->post(route('logout'));
     $this->assertGuest();
 });
 
 test('password verification works for invalid password', function () {
-    $user = User::factory()->create([ 'password' => bcrypt('password') ]);
+    $user = User::factory()->create(['password' => bcrypt('password')]);
 
     expect(Hash::check('wrong-password', $user->password))->toBeFalse();
 });

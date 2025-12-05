@@ -6,7 +6,7 @@ use App\Models\Category;
 use App\Models\Project;
 use App\Services\ProjectService;
 use App\Settings\GeneralSettings;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
@@ -22,19 +22,25 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $limit = $this->settings->homepage_projects_count > 0 
-            ? $this->settings->homepage_projects_count 
+        $limit = $this->settings->homepage_projects_count > 0
+            ? $this->settings->homepage_projects_count
             : 3;
 
-        $projects = Project::with(['category', 'techStacks', 'media'])
-            ->whereNotNull('published_at')
-            ->orderByDesc('published_at')
-            ->take($limit)
-            ->get();
+        // Cache projects for 1 hour (3600 seconds)
+        $projects = Cache::remember('homepage.projects.'.$limit, 3600, function () use ($limit) {
+            $projects = Project::with(['category', 'techStacks', 'media'])
+                ->whereNotNull('published_at')
+                ->orderByDesc('published_at')
+                ->take($limit)
+                ->get();
 
-        $projects = $this->projectService->addTruncatedFields($projects);
+            return $this->projectService->addTruncatedFields($projects);
+        });
 
-        $categories = Category::orderBy('name')->get();
+        // Cache categories for 1 hour
+        $categories = Cache::remember('categories.all', 3600, function () {
+            return Category::orderBy('name')->get();
+        });
 
         return view('home', compact('projects', 'categories'));
     }
