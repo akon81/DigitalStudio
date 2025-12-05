@@ -82,7 +82,7 @@
         this.autoplayIntervalTime = newIntervalTime;
         this.autoplay();
     },
-}" class="relative w-full max-w-4xl md:max-w-5xl mx-auto px-4 sm:px-6">
+}" class="relative w-full max-w-5xl md:max-w-6xl mx-auto px-4 sm:px-6">
 
 
     <!-- Previous button (hidden on small screens) -->

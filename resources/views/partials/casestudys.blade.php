@@ -7,7 +7,7 @@
 @endphp
 
 <section class="py-10 md:py-20 bg-white dark:bg-neutral-950">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="w-full mx-auto px-6 lg:px-12 xl:px-20">
         <div class="text-center mb-20">
             <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white tracking-tight">Historie projektów, które robią różnicę</h2>
             <p class="mt-4 text-base md:text-lg text-neutral-600 dark:text-neutral-400">
