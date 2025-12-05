@@ -3,7 +3,7 @@
 @section('title', 'Kontakt')
 
 @section('content')
-    <section class="py-20 bg-white overflow-hidden" id="faq-page">
+    <section class="py-20 bg-white overflow-hidden" id="contact-page">
         <div class="container mx-auto px-4">
              <div class="mb-16 text-center">
                 <h1 class="text-gray-900 font-black font-heading text-4xl md:text-5xl mb-6">Zapraszam do kontaktu</h1>
