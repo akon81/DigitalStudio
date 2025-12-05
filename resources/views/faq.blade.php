@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'FAQ - Najczęściej zadawane pytania')
+@section('meta_title', 'FAQ - Najczęściej zadawane pytania - DigitalStudio')
+@section('meta_description', 'Odpowiedzi na najważniejsze pytania dotyczące współpracy, procesu tworzenia stron internetowych i aplikacji webowych.')
+@section('meta_keywords', 'FAQ, pytania, odpowiedzi, współpraca, tworzenie stron, proces realizacji')
 
 @section('content')
     <section class="py-20 bg-white overflow-hidden" id="faq-page">

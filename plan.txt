@@ -3,7 +3,7 @@
 - [ ]  Utw�rz nowy projekt Laravel 12 w HERD
     
     ```bash
-    laravel new digitwebstudio
+    laravel new digitalstudio
     
     ```
     

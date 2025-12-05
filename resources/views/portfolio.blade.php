@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Portfolio projektów')
+@section('meta_title', 'Portfolio projektów - DigitalStudio')
+@section('meta_description', 'Zobacz moje realizacje - od prostych stron po zaawansowane aplikacje webowe. Każdy projekt to unikalne rozwiązanie dopasowane do potrzeb klienta.')
+@section('meta_keywords', 'portfolio, realizacje, strony internetowe, aplikacje web, projekty web development')
 
 @section('content')
     <section class="py-20 bg-white overflow-hidden" id="portfolio-page">       

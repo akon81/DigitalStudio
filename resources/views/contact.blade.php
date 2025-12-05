@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Kontakt')
+@section('meta_title', 'Kontakt - DigitalStudio')
+@section('meta_description', 'Skontaktuj się ze mną w sprawie realizacji projektu strony internetowej lub aplikacji webowej. Odpowiadam na wszystkie zapytania.')
+@section('meta_keywords', 'kontakt, zapytanie ofertowe, wycena strony internetowej, formularz kontaktowy')
 
 @section('content')
     <section class="py-20 bg-white overflow-hidden" id="contact-page">

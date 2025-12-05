@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Polityka Prywatności')
+@section('meta_title', 'Polityka Prywatności - DigitalStudio')
+@section('meta_description', 'Polityka prywatności DigitalStudio - informacje o przetwarzaniu danych osobowych, RODO, cookies i bezpieczeństwie danych.')
+@section('meta_keywords', 'polityka prywatności, RODO, dane osobowe, cookies, ochrona danych')
 
 @section('content')
 
