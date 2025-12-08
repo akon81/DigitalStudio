@@ -1,9 +1,10 @@
 <?php
 
+use Livewire\Volt\Volt;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
-use Livewire\Volt\Volt;
+use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\PortfolioController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -19,5 +20,7 @@ Route::get('/polityka-prywatnosci', function () {
 Route::get('/kontakt', function () {
     return view('contact', ['settings' => app(\App\Settings\GeneralSettings::class)]);
 })->name('contact');
+
+Route::get('/sitemap', SitemapController::class)->name('sitemap');
 
 require __DIR__.'/auth.php';
