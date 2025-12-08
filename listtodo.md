@@ -70,6 +70,14 @@
 - [ ] Tracking konwersji formularzy
 - [ ] Heatmapy (Hotjar/Microsoft Clarity)
 
+## 16. Strony błędów
+- [x] Strona 404 (Wyświetlana, gdy żądana strona nie istnieje. Powinna zawierać jasny komunikat, opcję powrotu do strony głównej oraz elementy zachęcające do dalszego przeglądania serwisu.)
+- [x] Strona 500 (Błąd serwera)
+- [x] Strona 403 (Brak dostępu)
+- [x] Strona 422 (Błąd walidacji)
+- [x] Strona 429 (Limit zapytań)
+- [x] Strona 503 (Serwis niedostępny)
+
 ---
 
 ## 📌 Priorytet

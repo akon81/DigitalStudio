@@ -10,7 +10,7 @@
 ])
 
 @php
-    $routeName = request()->route()->getName();
+    $routeName = request()->route()?->getName();
     $isHome = $routeName === 'home';
     $isContact = $routeName === 'contact';
     $buttonUrl = ($isHome || $isContact) ? '#kontakt' : route('contact');
