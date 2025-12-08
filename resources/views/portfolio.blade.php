@@ -26,7 +26,7 @@
                         :title="$project->title"
                         :excerpt="$project->truncated_excerpt"
                         :description="$project->truncated_description"
-                        :url="$project->url ?? route('portfolio').'#project-' . $project->id"
+                        :url="$project->url"
                         :img="$project->getFirstMediaUrl('images') ?: 'https://via.placeholder.com/600x400'"
                         :tags="$project->techStacks->pluck('name')->toArray()"
                     />
