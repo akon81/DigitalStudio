@@ -6,14 +6,15 @@ use Spatie\LaravelSettings\Settings;
 
 class GeneralSettings extends Settings
 {
-    public string $email;
+    public string $email = '';
 
-    public string $phone;
+    public string $phone = '';
 
-    public string $facebook;
+    public string $facebook = '';
 
-    public string $instagram;
-    public int $homepage_projects_count;
+    public string $instagram = '';
+    public int $homepage_projects_count = 0;
+    
 
     public static function group(): string
     {

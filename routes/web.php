@@ -1,22 +1,26 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\PortfolioController;
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
-Route::middleware(['auth'])->group(function () {
-    Route::redirect('settings', 'settings/profile');
+Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
-    Volt::route('settings/profile', 'settings.profile')->name('settings.profile');
-    Volt::route('settings/password', 'settings.password')->name('settings.password');
-    Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
-});
+Route::get('/polityka-prywatnosci', function () {
+    return view('privacy-policy');
+})->name('privacy-policy');
+
+Route::get('/kontakt', function () {
+    return view('contact', ['settings' => app(\App\Settings\GeneralSettings::class)]);
+})->name('contact');
+
+Route::get('/sitemap', SitemapController::class)->name('sitemap');
 
 require __DIR__.'/auth.php';

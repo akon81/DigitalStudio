@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Projects\Schemas;
 
+use Illuminate\Support\Str;
 use Filament\Schemas\Schema;
 
 class ProjectForm
@@ -14,11 +15,13 @@ class ProjectForm
                     ->label('Tytuł')
                     ->required()
                     ->live(onBlur: true)
-                    ->afterStateUpdated(fn ($state, $set) => $set('slug', \Str::slug($state))),
+                    ->afterStateUpdated(fn ($state, $set) => $set('slug', Str::slug($state))),
 
                 \Filament\Forms\Components\TextInput::make('slug')
                     ->label('Slug')
-                    ->disabled(),
+                    ->disabled()
+                    ->dehydrated()
+                    ->required(),
 
                 \Filament\Forms\Components\Textarea::make('excerpt')
                     ->label('Zajawka')
@@ -71,6 +74,43 @@ class ProjectForm
                     ->label('Data publikacji')
                     ->required(),
             ])->columnSpanFull(),
+
+            \Filament\Schemas\Components\Section::make('Studium przypadku')
+                ->description('Opcjonalne pola dla projektów wyświetlanych w sekcji Studium przypadku')
+                ->schema([
+                    \Filament\Forms\Components\Toggle::make('is_case_study')
+                        ->label('Czy to jest Studium przypadku?')
+                        ->live()
+                        ->default(false),
+
+                    \Filament\Forms\Components\TextInput::make('case_study_subtitle')
+                        ->label('Podtytuł dla Studium przypadku')
+                        ->maxLength(255)
+                        ->visible(fn ($get) => $get('is_case_study')),
+
+                    \Filament\Forms\Components\Textarea::make('case_study_goal')
+                        ->label('Wyjściowy cel')
+                        ->rows(4)
+                        ->visible(fn ($get) => $get('is_case_study')),
+
+                    \Filament\Forms\Components\Textarea::make('case_study_process')
+                        ->label('Proces')
+                        ->rows(4)
+                        ->visible(fn ($get) => $get('is_case_study')),
+
+                    \Filament\Forms\Components\Textarea::make('case_study_result')
+                        ->label('Efekt')
+                        ->rows(4)
+                        ->visible(fn ($get) => $get('is_case_study')),
+
+                    \Filament\Forms\Components\SpatieMediaLibraryFileUpload::make('case_study')
+                        ->label('Zdjęcie dla Studium przypadku')
+                        ->collection('case_study')
+                        ->image()
+                        ->conversion('thumb')
+                        ->visible(fn ($get) => $get('is_case_study')),
+                ])->columnSpanFull()
+                ->collapsible(),
         ]);
     }
 }
