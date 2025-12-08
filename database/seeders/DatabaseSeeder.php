@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
         ]);
     $this->call(CategorySeeder::class);
     $this->call(TechStackSeeder::class);
-    $this->call(ProjectSeeder::class);
+    //$this->call(ProjectSeeder::class);
     $this->call(GeneralSettingsSeeder::class);
     $this->call(AdminUserSeeder::class);
     $this->call(FaqSeeder::class);
