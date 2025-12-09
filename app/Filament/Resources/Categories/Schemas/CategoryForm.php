@@ -22,6 +22,16 @@ class CategoryForm
                     ->label('Slug')
                     ->required()
                     ->maxLength(255),
+                \Filament\Forms\Components\TextInput::make('order')
+                    ->label('Kolejność')
+                    ->numeric()
+                    ->default(0)
+                    ->required()
+                    ->helperText('Numer kolejności wyświetlania (mniejsza liczba = wyżej)'),
+                \Filament\Forms\Components\Toggle::make('is_active')
+                    ->label('Aktywna')
+                    ->default(true)
+                    ->helperText('Czy kategoria ma być widoczna w filtrze portfolio'),
             ]);
     }
 }

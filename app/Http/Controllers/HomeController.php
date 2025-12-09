@@ -38,8 +38,10 @@ class HomeController extends Controller
         });
 
         // Cache categories for 1 hour
-        $categories = Cache::remember('categories.all', 3600, function () {
-            return Category::orderBy('name')->get();
+        $categories = Cache::remember('categories.active', 3600, function () {
+            return Category::where('is_active', true)
+                ->orderBy('order')
+                ->get();
         });
 
         return view('home', compact('projects', 'categories'));

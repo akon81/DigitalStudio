@@ -16,6 +16,8 @@ class CategoryFactory extends Factory
         return [
             'name' => $name,
             'slug' => Str::slug($name),
+            'order' => $this->faker->numberBetween(0, 100),
+            'is_active' => true,
         ];
     }
 }

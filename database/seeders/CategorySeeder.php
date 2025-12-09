@@ -12,18 +12,26 @@ class CategorySeeder extends Seeder
         Category::create([
             'name' => 'Strona WWW',
             'slug' => 'strona-www',
+            'order' => 1,
+            'is_active' => true,
         ]);
         Category::create([
             'name' => 'Sklep internetowy',
             'slug' => 'sklep-internetowy',
+            'order' => 2,
+            'is_active' => true,
         ]);
         Category::create([
             'name' => 'Aplikacja webowa',
             'slug' => 'aplikacja-webowa',
+            'order' => 3,
+            'is_active' => true,
         ]);
         Category::create([
             'name' => 'Inne',
             'slug' => 'inne',
+            'order' => 4,
+            'is_active' => true,
         ]);
     }
 }

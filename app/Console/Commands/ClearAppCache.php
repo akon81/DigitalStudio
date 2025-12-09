@@ -36,6 +36,7 @@ class ClearAppCache extends Command
 
         // Clear categories cache
         Cache::forget('categories.all');
+        Cache::forget('categories.active');
 
         // Clear FAQs cache
         Cache::forget('faqs.active');

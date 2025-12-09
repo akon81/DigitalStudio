@@ -13,6 +13,9 @@ class CategoriesTable
     {
         $table = $table
             ->columns([
+                \Filament\Tables\Columns\TextColumn::make('order')
+                    ->label('Kolejność')
+                    ->sortable(),
                 \Filament\Tables\Columns\TextColumn::make('name')
                     ->label('Nazwa')
                     ->searchable()
@@ -20,10 +23,15 @@ class CategoriesTable
                 \Filament\Tables\Columns\TextColumn::make('slug')
                     ->label('Slug')
                     ->searchable(),
+                \Filament\Tables\Columns\IconColumn::make('is_active')
+                    ->label('Aktywna')
+                    ->boolean()
+                    ->sortable(),
                 \Filament\Tables\Columns\TextColumn::make('created_at')
                     ->label('Utworzono')
                     ->dateTime('Y-m-d H:i')
-                    ->sortable(),
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
@@ -35,7 +43,8 @@ class CategoriesTable
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
-            ]);
-        return $table->defaultSort('name', 'asc');
+            ])
+            ->reorderable('order');
+        return $table->defaultSort('order', 'asc');
     }
 }

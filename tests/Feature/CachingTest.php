@@ -21,12 +21,12 @@ test('projects are cached on homepage', function () {
 });
 
 test('categories are cached', function () {
-    Category::factory()->count(5)->create();
+    Category::factory()->count(5)->create(['is_active' => true]);
 
     // First call - should cache
     $this->get('/');
 
-    expect(Cache::has('categories.all'))->toBeTrue();
+    expect(Cache::has('categories.active'))->toBeTrue();
 });
 
 test('cache is cleared when project is created', function () {
@@ -46,11 +46,11 @@ test('cache is cleared when project is created', function () {
 });
 
 test('cache is cleared when category is updated', function () {
-    Cache::put('categories.all', collect(), 3600);
+    Cache::put('categories.active', collect(), 3600);
 
     $category = Category::factory()->create();
 
-    expect(Cache::has('categories.all'))->toBeFalse();
+    expect(Cache::has('categories.active'))->toBeFalse();
 });
 
 test('FAQs are cached', function () {
