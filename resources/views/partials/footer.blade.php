@@ -6,7 +6,7 @@
 				<x-logo file="ds_logo_inv.png"/>
 			</div>
 			<div class="w-full md:w-auto">
-				<ul class="flex flex-wrap items-center gap-6">
+				<ul class="text-center flex flex-wrap items-center justify-center md:justify-start gap-6">
 					<li><a class="text-xs md:text-sm font-bold text-gray-300 hover:text-white" href="{{ route('home') }}">Strona główna</a></li>
 					<li><a class="text-xs md:text-sm font-bold text-gray-300 hover:text-white" href="{{ route('portfolio') }}">Portfolio</a></li>
 					<li><a class="text-xs md:text-sm font-bold text-gray-300 hover:text-white" href="{{ route('faq') }}">FAQ</a></li>
@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<div class="pt-8 flex flex-wrap justify-between items-center">
-			<p class="text-xs md:text-sm text-gray-400 font-bold">© {{ now()->year }} {{ config('app.name') }}. Wszelkie prawa zastrzeżone.</p>
+			<p class="text-[11px] md:text-sm text-gray-400 font-bold">© {{ now()->year }} {{ config('app.name') }}. Wszelkie prawa zastrzeżone.</p>
 			<div class="hidden md:flex gap-4">
 				<a class="text-gray-400 hover:text-white" href="{{ $settings->facebook }}">
 					<svg width="24" height="24" viewbox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
