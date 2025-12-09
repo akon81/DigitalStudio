@@ -3,6 +3,7 @@
 /public/hot
 /public/images
 /public/storage
+/public/sitemap.xml
 /storage/*.key
 /storage/pail
 /vendor
