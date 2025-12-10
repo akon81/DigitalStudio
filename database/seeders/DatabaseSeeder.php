@@ -15,17 +15,18 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        \App\Models\User::firstOrCreate([
-            'email' => 'test@example.com',
-        ], [
-            'name' => 'Test User',
-            'password' => bcrypt('password'),
-        ]);
-    $this->call(CategorySeeder::class);
-    $this->call(TechStackSeeder::class);
-    //$this->call(ProjectSeeder::class);
-    $this->call(GeneralSettingsSeeder::class);
-    $this->call(AdminUserSeeder::class);
-    $this->call(FaqSeeder::class);
+        // \App\Models\User::firstOrCreate([
+        //     'email' => 'test@example.com',
+        // ], [
+        //     'name' => 'Test User',
+        //     'password' => bcrypt('password'),
+        // ]);
+        $this->call(CategorySeeder::class);
+        $this->call(TechStackSeeder::class);
+        // $this->call(ProjectSeeder::class);
+        $this->call(GeneralSettingsSeeder::class);
+        $this->call(AdminUserSeeder::class);
+        $this->call(FaqSeeder::class);
+        $this->call(PageSeeder::class);
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-use Livewire\Volt\Volt;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\SitemapController;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -13,9 +13,9 @@ Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio
 
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
-Route::get('/polityka-prywatnosci', function () {
-    return view('privacy-policy');
-})->name('privacy-policy');
+Route::get('/polityka-prywatnosci', [PageController::class, 'show'])->defaults('slug', 'privacy-policy')->name('privacy-policy');
+
+Route::get('/regulamin', [PageController::class, 'show'])->defaults('slug', 'terms-of-service')->name('terms-of-service');
 
 Route::get('/kontakt', function () {
     return view('contact', ['settings' => app(\App\Settings\GeneralSettings::class)]);

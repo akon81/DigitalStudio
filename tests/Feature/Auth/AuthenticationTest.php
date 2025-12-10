@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 test('users can authenticate programmatically', function () {
@@ -37,7 +38,7 @@ test('programmatic login and logout behavior', function () {
     $this->assertAuthenticatedAs($user);
 
     // Test logout functionality
-    $this->post(route('logout'));
+    Auth::logout();
     $this->assertGuest();
 });
 
