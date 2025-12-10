@@ -13,9 +13,9 @@ Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio
 
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
-Route::get('/polityka-prywatnosci', [PageController::class, 'show'])->defaults('slug', 'privacy-policy')->name('privacy-policy');
+Route::get('/polityka-prywatnosci', [PageController::class, 'show'])->defaults('slug', 'polityka-prywatnosci')->name('privacy-policy');
 
-Route::get('/regulamin', [PageController::class, 'show'])->defaults('slug', 'terms-of-service')->name('terms-of-service');
+Route::get('/regulamin', [PageController::class, 'show'])->defaults('slug', 'regulamin')->name('terms-of-service');
 
 Route::get('/kontakt', function () {
     return view('contact', ['settings' => app(\App\Settings\GeneralSettings::class)]);
