@@ -4,8 +4,8 @@
             <img class="w-full h-64 object-cover" src="{{ $img }}" alt="{{ $title }}" loading="lazy"/>
             <!-- Hover overlay only over image -->
             <div class="absolute left-0 top-0 w-full h-full bg-white flex flex-col justify-center items-center px-6 py-8 opacity-0 -translate-y-full group-hover:opacity-80 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
-                <h3 class="text-gray-900 font-black font-heading text-2xl mb-3 text-center">{{ $title }}</h3>
-                <p class="text-gray-700 font-bold text-center">{{ $description }}</p>
+                <h3 class="text-gray-900 mt-10 font-black font-heading text-2xl mb-3 text-center">{{ $title }}</h3>
+                <p class="text-gray-700 text-base font-bold mb-12 flex-1 mx-12 text-justify">{{ $description }}</p>
             </div>
         </div>
         <div class="p-6 flex-1 flex flex-col">
@@ -17,7 +17,7 @@
                 @endif
             </div>
             <h3 class="text-gray-900 font-black font-heading text-2xl mb-3 text-center">{{ $title }}</h3>
-            <p class="text-gray-500 font-bold mb-4 flex-1">{{ $excerpt }}</p>
+            <p class="text-gray-500 font-bold mb-4 flex-1 mx-4">{{ $excerpt }}</p>
             @if(!empty($url))
                 <a class="inline-flex text-sm md:text-base items-center text-blue-500 font-bold hover:text-blue-600" href="{{ str_starts_with($url, 'http') ? $url : 'https://' . $url }}" target="_blank" rel="noopener noreferrer">
                     Zobacz projekt
