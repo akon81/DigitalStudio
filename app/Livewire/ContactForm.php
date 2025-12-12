@@ -74,6 +74,7 @@ class ContactForm extends Component
                 ->queue(new ContactFormMail(
                     $this->name,
                     $this->email,
+                    $this->phone,
                     $this->subject,
                     $this->message
                 ));

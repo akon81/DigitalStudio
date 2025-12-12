@@ -70,6 +70,15 @@
             </div>
         </div>
 
+        @if($contactPhone)
+        <div class="field">
+            <div class="field-label">Telefon:</div>
+            <div class="field-value">
+                <a href="tel:{{ $contactPhone }}">{{ $contactPhone }}</a>
+            </div>
+        </div>
+        @endif
+
         <div class="field">
             <div class="field-label">Temat:</div>
             <div class="field-value">{{ $contactSubject }}</div>
