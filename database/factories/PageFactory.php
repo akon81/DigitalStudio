@@ -34,7 +34,7 @@ class PageFactory extends Factory
     public function privacyPolicy(): static
     {
         return $this->state(fn (array $attributes) => [
-            'slug' => 'privacy-policy',
+            'slug' => 'polityka-prywatnosci',
             'title' => 'Polityka prywatności',
         ]);
     }
@@ -42,7 +42,7 @@ class PageFactory extends Factory
     public function termsOfService(): static
     {
         return $this->state(fn (array $attributes) => [
-            'slug' => 'terms-of-service',
+            'slug' => 'regulamin',
             'title' => 'Regulamin',
         ]);
     }

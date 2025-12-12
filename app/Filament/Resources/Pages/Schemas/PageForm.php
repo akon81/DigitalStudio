@@ -15,7 +15,7 @@ class PageForm
                     ->required()
                     ->unique(ignoreRecord: true)
                     ->maxLength(255)
-                    ->helperText('Unikalny identyfikator strony (np. privacy-policy, terms-of-service)')
+                    ->helperText('Unikalny identyfikator strony (np. polityka-prywatnosci, regulamin)')
                     ->regex('/^[a-z0-9]+(?:-[a-z0-9]+)*$/'),
                 \Filament\Forms\Components\TextInput::make('title')
                     ->label('Tytuł')
