@@ -23,9 +23,14 @@
         }
         .header {
             background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
-            padding: 40px 30px;
+            padding: 50px 30px;
             text-align: center;
             color: #ffffff;
+        }
+        .logo {
+            max-width: 180px;
+            height: auto;
+            margin-bottom: 20px;
         }
         .header h1 {
             margin: 0;
@@ -56,6 +61,14 @@
             color: #4b5563;
             white-space: pre-line;
         }
+        .message-box .label {
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
         .footer {
             background: #f9fafb;
             padding: 30px;
@@ -76,26 +89,28 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>✓ Wiadomość otrzymana</h1>
+            <img src="{{ asset('assets/img/ds_logo.png') }}" alt="Digital Studio Logo" class="logo">
+            <h1>Dziękujemy za kontakt!</h1>
         </div>
         
         <div class="content">
             <p>Witaj <strong>{{ $contactName }}</strong>,</p>
             
-            <p>Dziękujemy za kontakt! Twoja wiadomość dotarła już do mnie.</p>
+            <p>Twoja wiadomość właśnie do mnie dotarła i została zarejestrowana w moim systemie.</p>
             
-            <p>Postaram się odpowiedzieć <span class="highlight">najszybciej jak to możliwe.</span></p>
+            <p>Odpowiem na nią <span class="highlight">w ciągu 24 godzin roboczych.</span></p>
 
             <div class="message-box">
-                <h3>📝 Twoja wiadomość:</h3>
-                <p><strong>Temat:</strong> {{ $contactSubject }}</p>
-                <p style="margin-top: 12px;"><strong>Treść:</strong></p>
+                <h3>Szczegóły Twojej wiadomości</h3>
+                <div class="label">Temat</div>
+                <p style="margin-bottom: 16px;"><strong>{{ $contactSubject }}</strong></p>
+                <div class="label">Treść wiadomości</div>
                 <p>{{ $contactMessage }}</p>
             </div>
 
-            <p>Jeśli potrzebujesz pomocy lub masz dodatkowe pytania, nie wahaj się skontaktować ponownie.</p>
+            <p>W razie pilnej sprawy lub dodatkowych pytań, możesz skontaktować się ze mną bezpośrednio.</p>
             
-            <p style="margin-top: 32px;">Pozdrawiam serdecznie,<br>
+            <p style="margin-top: 32px;">Z poważaniem,<br>
             <strong>Digital Studio</strong></p>
         </div>
         
