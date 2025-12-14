@@ -58,8 +58,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', '{{ config('services.google_analytics.id') }}', {
-        'cookie_domain': 'digitalstudio.com.pl',
-        'cookie_flags': 'SameSite=None;Secure'
+        'cookie_domain': 'digitalstudio.com.pl'
       });
       
       // Load gtag.js asynchronously after page load
