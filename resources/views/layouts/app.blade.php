@@ -87,7 +87,7 @@
     {{-- Defer non-critical scripts --}}
     @livewireScripts
     @vite('resources/js/app.js')
-    <script defer>{!! CookieConsent::scripts() !!}</script>
+    {!! CookieConsent::scripts() !!}
     
     {{-- Schema.org JSON-LD --}}
     @php
