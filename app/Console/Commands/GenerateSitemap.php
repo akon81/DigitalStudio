@@ -52,17 +52,6 @@ class GenerateSitemap extends Command
                 ->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY)
                 ->setPriority(0.3));
 
-        // Add published projects
-        $projects = Project::whereNotNull('published_at')->get();
-        foreach ($projects as $project) {
-            if ($project->url) {
-                $sitemap->add(Url::create($project->url)
-                    ->setLastModificationDate($project->updated_at)
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
-                    ->setPriority(0.6));
-            }
-        }
-
         $sitemap->writeToFile(public_path('sitemap.xml'));
 
         $this->info('✓ Sitemap generated successfully at public/sitemap.xml');
