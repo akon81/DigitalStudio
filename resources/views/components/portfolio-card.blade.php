@@ -1,9 +1,40 @@
-<div class="w-full md:w-1/2 lg:w-1/3 p-4 portfolio-item" data-category="{{ $category ?? '' }}">
+<div class="w-full md:w-1/2 lg:w-1/3 p-4 portfolio-item" data-category="{{ $category ?? '' }}" x-data="{ showDescription: false }">
     <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 relative group h-full flex flex-col">
         <div class="relative">
             <img class="w-full h-64 object-cover" src="{{ $img }}" alt="{{ $title }}" loading="lazy"/>
-            <!-- Hover overlay only over image -->
-            <div class="absolute left-0 top-0 w-full h-full bg-white flex flex-col justify-center items-center px-6 py-8 opacity-0 -translate-y-full group-hover:opacity-80 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+            
+            <!-- Mobile toggle button (visible only on small screens) -->
+            <button 
+                @click="showDescription = !showDescription"
+                class="md:hidden absolute top-4 right-4 z-20 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+                aria-label="Pokaż opis"
+            >
+                <svg x-show="!showDescription" class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                </svg>
+                <svg x-show="showDescription" class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            
+            <!-- Hover overlay for desktop -->
+            <div class="hidden md:flex absolute left-0 top-0 w-full h-full bg-white flex-col justify-center items-center px-6 py-8 opacity-0 -translate-y-full group-hover:opacity-80 group-hover:translate-y-0 transition-all duration-300 ease-in-out">
+                <h3 class="text-gray-900 mt-10 font-black font-heading text-2xl mb-3 text-center">{{ $title }}</h3>
+                <p class="text-gray-700 text-base font-bold mb-12 flex-1 mx-12 text-justify">{{ $description }}</p>
+            </div>
+            
+            <!-- Mobile overlay (click-triggered) -->
+            <div 
+                x-show="showDescription"
+                x-transition:enter="transition ease-out duration-300"
+                x-transition:enter-start="opacity-0 -translate-y-full"
+                x-transition:enter-end="opacity-80 translate-y-0"
+                x-transition:leave="transition ease-in duration-300"
+                x-transition:leave-start="opacity-80 translate-y-0"
+                x-transition:leave-end="opacity-0 -translate-y-full"
+                class="md:hidden absolute left-0 top-0 w-full h-full bg-white flex flex-col justify-center items-center px-6 py-8 z-10"
+                style="display: none;"
+            >
                 <h3 class="text-gray-900 mt-10 font-black font-heading text-2xl mb-3 text-center">{{ $title }}</h3>
                 <p class="text-gray-700 text-base font-bold mb-12 flex-1 mx-12 text-justify">{{ $description }}</p>
             </div>
