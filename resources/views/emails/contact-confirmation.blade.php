@@ -91,7 +91,7 @@
 <body>
     <div class="container">
         <div class="header">
-            <img src="{{ asset('assets/img/ds_logo.png') }}" alt="Digital Studio Logo" class="logo">
+            <img src="{{ asset('assets/img/ds_logo.png') }}" alt="Digital Studio Logo" class="logo" width="200" height="50">
             <h1>Dziękujemy za kontakt!</h1>
         </div>
         

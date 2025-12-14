@@ -28,6 +28,10 @@
     <meta name="twitter:description" content="@yield('twitter_description', config('seo.defaults.description'))">
     <meta name="twitter:image" content="@yield('twitter_image', asset(config('seo.defaults.image')))">
     
+    {{-- DNS Prefetch & Preconnect for critical resources --}}
+    <link rel="dns-prefetch" href="https://fonts.bunny.net">
+    <link rel="preconnect" href="https://fonts.bunny.net" crossorigin>
+    
     {{-- Favicons --}}
     <link rel="icon" href="/favicon.ico" sizes="32x32">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -35,23 +39,33 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    {{-- Fonts --}}
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+    {{-- Fonts with subset optimization - load asynchronously --}}
+    <link rel="preload" as="style" href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600&display=swap&subset=latin" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600&display=swap&subset=latin" rel="stylesheet"></noscript>
     
     {{-- Styles --}}
     @vite('resources/css/app.css')
     @livewireStyles
-    {!! CookieConsent::styles() !!}
+    
+    {{-- Load Cookie Consent CSS asynchronously (non-critical) --}}
+    <link rel="preload" as="style" href="{{ asset('vendor/devrabiul/laravel-cookie-consent/css/style.css') }}" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>{!! CookieConsent::styles() !!}</noscript>
     
     @if(config('services.google_analytics.id'))
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google_analytics.id') }}"></script>
+    <!-- Google tag (gtag.js) - Deferred for performance -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', '{{ config('services.google_analytics.id') }}');
+      
+      // Load gtag.js asynchronously after page load
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id={{ config('services.google_analytics.id') }}';
+        script.async = true;
+        document.head.appendChild(script);
+      });
     </script>
     @endif
     
@@ -67,9 +81,10 @@
 
     <x-scrollup/>
 
-    @vite('resources/js/app.js')
+    {{-- Defer non-critical scripts --}}
     @livewireScripts
-    {!! CookieConsent::scripts() !!}
+    @vite('resources/js/app.js')
+    <script defer>{!! CookieConsent::scripts() !!}</script>
     
     {{-- Schema.org JSON-LD --}}
     @php

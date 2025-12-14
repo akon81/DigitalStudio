@@ -1,7 +1,7 @@
 <div class="w-full md:w-1/2 lg:w-1/3 p-4 portfolio-item" data-category="{{ $category ?? '' }}" x-data="{ showDescription: false }">
     <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 relative group h-full flex flex-col">
         <div class="relative">
-            <img class="w-full h-64 object-cover" src="{{ $img }}" alt="{{ $title }}" loading="lazy"/>
+            <img class="w-full h-64 object-cover" src="{{ $img }}" alt="{{ $title }}" width="600" height="400" loading="lazy"/>
             
             <!-- Mobile toggle button (visible only on small screens) -->
             <button 

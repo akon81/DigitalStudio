@@ -15,4 +15,16 @@ export default defineConfig({
     server: {
         cors: true,
     },
+    build: {
+        // Code splitting and chunk optimization
+        rollupOptions: {
+            output: {
+                manualChunks: undefined,
+            }
+        },
+        // Use esbuild for minification (faster and included by default)
+        minify: 'esbuild',
+        // Reduce chunk size warnings threshold
+        chunkSizeWarningLimit: 1000,
+    },
 });

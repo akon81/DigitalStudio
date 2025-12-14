@@ -4,7 +4,7 @@
 		<div class="flex flex-wrap justify-center -m-4">
 		<div class="w-full md:w-1/3 p-4">
 			<div class="overflow-hidden rounded-3xl h-[480px] md:h-[640px]" >
-				<img class="w-full h-full object-cover animate-zoom" src="assets/img/banner_hero01.jpg" alt="banner" loading="eager"/>
+				<img class="w-full h-full object-cover animate-zoom" src="assets/img/banner_hero01.jpg" alt="banner" width="800" height="1200" fetchpriority="high"/>
 			</div>
 		</div>
 		<div class="w-full md:flex-1 p-4">
