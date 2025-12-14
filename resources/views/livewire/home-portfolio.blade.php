@@ -6,26 +6,6 @@
             <p class="md:text-xl text-base text-gray-500 font-bold max-w-2xl mx-auto">Poznaj projekty, które stworzyłem dla moich klientów - od prostych stron po złożone aplikacje webowe.</p>
         </div>
 
-        <div class="mb-12 flex flex-wrap justify-center gap-3">
-            <button
-                type="button"
-                wire:click="setCategory"
-                class="px-5 py-2 md:px-6 md:py-3 text-[11px] md:text-sm font-bold rounded-full cursor-pointer transition focus:ring-4 {{ $activeCategoryId === null ? 'bg-blue-500 text-white' : 'bg-white text-gray-900 border border-gray-100' }} hover:bg-gray-100 hover:text-gray-600 focus:ring-gray-200"
-            >
-                Wszystkie
-            </button>
-
-            @foreach($this->categories as $category)
-                <button
-                    type="button"
-                    wire:click="setCategory({{ $category->id }})"
-                    class="px-5 py-2 md:px-6 md:py-3 text-[11px] md:text-sm font-bold rounded-full cursor-pointer transition focus:ring-4 {{ $activeCategoryId === $category->id ? 'bg-blue-500 text-white' : 'bg-white text-gray-900 border border-gray-100' }} hover:bg-gray-100 hover:text-gray-600 focus:ring-gray-200"
-                >
-                    {{ $category->name }}
-                </button>
-            @endforeach
-        </div>
-
         <div class="flex flex-wrap -m-4">
             @if($this->projects->count() > 0)
                 @foreach($this->projects as $project)

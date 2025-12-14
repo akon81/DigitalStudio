@@ -12,6 +12,10 @@
                 <p class="md:text-xl text-lg text-gray-500 font-bold max-w-2xl mx-auto">Portfolio moich realizacji - od prostych stron po zaawansowane aplikacje webowe.</p>
             </div>
 
+            <div class="mb-8 text-center">
+                <p class="text-sm text-gray-600 font-medium">Filtruj projekty według kategorii:</p>
+            </div>
+
             <div class="mb-12 flex flex-wrap justify-center gap-3">
                 <x-portfolio-filter-btn category="wszystkie" :active="true">Wszystkie</x-portfolio-filter-btn>
                 @foreach($categories as $category)
