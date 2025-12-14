@@ -20,12 +20,13 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e7eb;
         }
         .header {
-            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            background: #ffffff;
             padding: 50px 30px;
             text-align: center;
-            color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
         }
         .logo {
             max-width: 180px;
@@ -36,6 +37,7 @@
             margin: 0;
             font-size: 28px;
             font-weight: 700;
+            color: #374151;
         }
         .content {
             padding: 40px 30px;
