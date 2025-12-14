@@ -1,6 +1,6 @@
 
 <section class="py-20 bg-white overflow-hidden" id="kontakt">
-	<div class="container mx-auto px-4">
+	<div class="container max-w-7xl mx-auto px-4">
 		<div class="max-w-4xl mx-auto">
 			<div class="mb-16 text-center">
 				<span class="inline-block mb-3 text-sm text-blue-500 font-bold uppercase tracking-widest">Skontaktuj się</span>

@@ -5,7 +5,7 @@
 
 @section('content')
 <section class="py-20 bg-gray-50 min-h-screen flex items-center">
-    <div class="container mx-auto px-4">
+    <div class="container max-w-7xl mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center">
             <div class="mb-8">
                 <svg class="mx-auto h-32 w-32 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

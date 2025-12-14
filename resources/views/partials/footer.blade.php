@@ -1,6 +1,6 @@
 
 <footer class="py-12 bg-gray-900">
-	<div class="container mx-auto px-4">
+	<div class="container max-w-7xl mx-auto px-4">
 		<div class="flex flex-wrap justify-between items-center pb-8 border-b border-gray-800">
 			<div class="w-full md:w-auto mb-6 md:mb-0">
 				<x-logo file="ds_logo_inv.png"/>

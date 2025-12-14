@@ -17,7 +17,7 @@
 @endphp
 
 <section class="pt-6 bg-white overflow-hidden" x-data="{ mobileNavOpen: false }">
-	<div class="container mx-auto px-4">
+	<div class="container max-w-7xl mx-auto px-4">
 		<div class="mb-6">
 		<div class="flex items-center justify-between px-6 py-3.5 bg-white">
 			<div class="w-auto">

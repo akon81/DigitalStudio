@@ -1,7 +1,7 @@
 
 
-<section class="bg-white border-b border-gray-100 sticky top-0 z-50">
-		<div class="container mx-auto px-4 py-2 flex flex-wrap items-center justify-between">
+<section class=" bg-white border-b border-gray-100 sticky top-0 z-50">
+		<div class="container max-w-7xl mx-auto px-4 py-2 flex flex-wrap items-center justify-between">
 			<div class="flex items-center gap-6 text-gray-900 text-[11px] md:text-sm font-bold">
 				<div class="flex items-center gap-2">
 					<svg class="w-4 h-4 md:w-5 md:h-5 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2 8.5C2 6.015 4.015 4 6.5 4h11A4.5 4.5 0 0 1 22 8.5v7A4.5 4.5 0 0 1 17.5 20h-11A4.5 4.5 0 0 1 2 15.5v-7Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 8l6 4 6-4"/></svg>

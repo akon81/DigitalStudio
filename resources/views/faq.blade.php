@@ -6,7 +6,7 @@
 
 @section('content')
     <section class="py-20 bg-white overflow-hidden" id="faq-page">
-        <div class="container mx-auto px-4">
+        <div class="container max-w-7xl mx-auto px-4">
              <div class="mb-16 text-center">
                 <h1 class="text-gray-900 font-black font-heading text-4xl md:text-5xl mb-6">Najczęściej zadawane pytania</h1>
                 <p class="md:text-xl text-lg text-gray-500 font-bold max-w-2xl mx-auto">Odpowiedzi na najważniejsze pytania dotyczące współpracy i tworzenia stron</p>

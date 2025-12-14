@@ -1,6 +1,6 @@
 
 <section class="pt-6 pb-10 bg-white overflow-hidden">
-	<div class="container mx-auto px-4">
+	<div class="container max-w-7xl mx-auto px-4">
 		<div class="flex flex-wrap justify-center -m-4">
 		<div class="w-full md:w-1/3 p-4">
 			<div class="overflow-hidden rounded-3xl h-[480px] md:h-[640px]" >
