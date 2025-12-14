@@ -57,7 +57,10 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', '{{ config('services.google_analytics.id') }}');
+      gtag('config', '{{ config('services.google_analytics.id') }}', {
+        'cookie_domain': 'digitalstudio.com.pl',
+        'cookie_flags': 'SameSite=None;Secure'
+      });
       
       // Load gtag.js asynchronously after page load
       window.addEventListener('load', function() {
