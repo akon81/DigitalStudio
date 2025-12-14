@@ -58,5 +58,20 @@ class ProjectObserver
         for ($i = 1; $i <= 10; $i++) {
             Cache::forget('homepage.projects.'.$i);
         }
+
+        // Regenerate sitemap
+        $this->regenerateSitemap();
+    }
+
+    /**
+     * Regenerate sitemap.xml file.
+     */
+    protected function regenerateSitemap(): void
+    {
+        try {
+            \Illuminate\Support\Facades\Artisan::call('sitemap:generate');
+        } catch (\Exception $e) {
+            \Illuminate\Support\Facades\Log::error('Failed to regenerate sitemap: '.$e->getMessage());
+        }
     }
 }
