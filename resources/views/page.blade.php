@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('canonical', Request::url())
 @section('meta_title', $page->title . ' - DigitalStudio')
 @section('meta_description', 'Informacje prawne DigitalStudio')
 @section('meta_keywords', $page->slug)

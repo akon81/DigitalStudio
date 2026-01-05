@@ -10,7 +10,7 @@
     <meta name="keywords" content="@yield('meta_keywords', config('seo.defaults.keywords'))">
     <meta name="author" content="{{ config('seo.defaults.author') }}">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="@yield('canonical', url()->current())">
+    <link rel="canonical" href="@yield('canonical', Request::url())">
     
     {{-- Open Graph Meta Tags --}}
     <meta property="og:title" content="@yield('og_title', config('seo.defaults.title'))">

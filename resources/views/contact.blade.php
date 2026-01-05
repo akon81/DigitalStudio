@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('canonical', route('contact'))
+
 @section('meta_title', 'Kontakt - DigitalStudio')
 @section('meta_description', 'Skontaktuj się ze mną w sprawie realizacji projektu strony internetowej lub aplikacji webowej. Odpowiadam na wszystkie zapytania.')
 @section('meta_keywords', 'kontakt, zapytanie ofertowe, wycena strony internetowej, formularz kontaktowy')

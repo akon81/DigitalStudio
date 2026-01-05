@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('canonical', route('faq'))
+
 @section('meta_title', 'FAQ - Najczęściej zadawane pytania - DigitalStudio')
 @section('meta_description', 'Odpowiedzi na najważniejsze pytania dotyczące współpracy, procesu tworzenia stron internetowych i aplikacji webowych.')
 @section('meta_keywords', 'FAQ, pytania, odpowiedzi, współpraca, tworzenie stron, proces realizacji')
