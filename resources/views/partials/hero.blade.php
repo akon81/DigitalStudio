@@ -18,7 +18,7 @@
 				<span>Strony i aplikacje</span>
 				<span class="text-blue-500">które będą działać dla Ciebie</span>
 				</h1>
-				<p class="mb-8 text-xl font-bold">Specjalizuję się w budowaniu responsywnych, wydajnych rozwiązań z wykorzystaniem najnowszych technologii.</p>
+				<p class="mb-8 text-xl font-bold">Zamieniam pomysły w dopracowane strony, które realnie pracują na sukces marki klientów.</p>
 				<div class="flex flex-wrap justify-center -m-2">
 				<x-button-main title="Zobacz projekty" url="#portfolio" />
 				<div class="w-full md:w-auto p-2"><a class="block w-full px-4 py-2.5 text-sm text-center text-gray-900 font-bold bg-gray-50 hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-full" href="#kontakt">Kontakt</a></div>

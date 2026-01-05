@@ -2,8 +2,8 @@
     <div class="container max-w-7xl mx-auto px-4">
         <div class="mb-16 text-center">
             <span class="inline-block mb-3 text-sm text-blue-500 font-bold uppercase tracking-widest">Przykładowe realizacje</span>
-            <h2 class="text-gray-900 font-black font-heading text-3xl md:text-4xl mb-6">Portfolio projektów</h2>
-            <p class="md:text-xl text-base text-gray-500 font-bold max-w-2xl mx-auto">Poznaj projekty, które stworzyłem dla moich klientów - od prostych stron po złożone aplikacje webowe.</p>
+            <h2 class="text-gray-900 font-black font-heading text-3xl md:text-4xl mb-6">Rozwiązania dopasowane do konkretnych potrzeb</h2>
+            <p class="md:text-xl text-base text-gray-500 font-bold max-w-2xl mx-auto">Zobacz projekty stworzone z myślą o realnych celach klientów.</p>
         </div>
 
         <div class="flex flex-wrap -m-4">

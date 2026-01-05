@@ -9,9 +9,9 @@
 <section class="py-10 md:py-20 bg-white dark:bg-neutral-950">
     <div class="w-full mx-auto px-6 lg:px-12 xl:px-20">
         <div class="text-center mb-20">
-            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white tracking-tight">Historie projektów, które robią różnicę</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-neutral-900 dark:text-white tracking-tight">Projekty tworzone z myślą o celach klientów</h2>
             <p class="mt-4 text-base md:text-lg text-neutral-600 dark:text-neutral-400">
-                Każda realizacja to inna potrzeba, inny charakter i inny cel. Moim zadaniem jest przemienić je w dopracowane, efektywne doświadczenie cyfrowe.
+                Tworzę dopracowane doświadczenia cyfrowe, które pomagają firmom wyróżnić się, działać skuteczniej i rozwijać się online.
             </p>
         </div>
 
