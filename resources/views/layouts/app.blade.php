@@ -73,7 +73,22 @@
     
     @stack('head')
 </head>
-<body>
+<body x-data="cursorEffect()" @mousemove.window="trackCursor($event)" @mouseleave.window="hideCursor()" class="relative overflow-x-hidden">
+    {{-- Magnetic Cursor Trail Effect --}}
+    <div class="pointer-events-none fixed inset-0 z-10 transition-opacity duration-700 ease-out"
+         :style="`opacity: ${glowOpacity}`">
+        
+        {{-- Main cursor glow --}}
+        <div class="absolute w-96 h-96 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl transition-all duration-300 ease-out"
+             :style="`left: ${x}px; top: ${y}px; background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0.2) 40%, transparent 70%);`">
+        </div>
+        
+        {{-- Secondary glow for depth --}}
+        <div class="absolute w-64 h-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-2xl transition-all duration-500 ease-out"
+             :style="`left: ${x}px; top: ${y}px; background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.15) 50%, transparent 70%);`">
+        </div>
+    </div>
+
     @include('partials.contact-top', ['settings' => app(\App\Settings\GeneralSettings::class)])
     <x-navigation />
 
@@ -105,6 +120,43 @@
     
     <script type="application/ld+json">
         {!! json_encode($schemaOrg, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+    </script>
+    
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('cursorEffect', () => ({
+                x: 0,
+                y: 0,
+                glowOpacity: 0,
+                targetOpacity: 0,
+                lastMoveTime: Date.now(),
+                
+                init() {
+                    // Smooth opacity animation
+                    setInterval(() => {
+                        // Gradually increase or decrease opacity towards target
+                        const diff = this.targetOpacity - this.glowOpacity;
+                        this.glowOpacity += diff * 0.1;
+                        
+                        // Check for inactivity - fade out after 1 seconds
+                        if (Date.now() - this.lastMoveTime > 1000) {
+                            this.targetOpacity = 0;
+                        }
+                    }, 16); // ~60fps
+                },
+                
+                trackCursor(event) {
+                    this.x = event.clientX;
+                    this.y = event.clientY;
+                    this.targetOpacity = 0.8;
+                    this.lastMoveTime = Date.now();
+                },
+                
+                hideCursor() {
+                    this.targetOpacity = 0;
+                }
+            }));
+        });
     </script>
     
     @stack('scripts')
