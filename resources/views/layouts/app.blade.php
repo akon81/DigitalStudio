@@ -10,13 +10,13 @@
     <meta name="keywords" content="@yield('meta_keywords', config('seo.defaults.keywords'))">
     <meta name="author" content="{{ config('seo.defaults.author') }}">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="@yield('canonical', Request::url())">
+    <link rel="canonical" href="@yield('canonical', url()->current())">
     
     {{-- Open Graph Meta Tags --}}
     <meta property="og:title" content="@yield('og_title', config('seo.defaults.title'))">
     <meta property="og:description" content="@yield('og_description', config('seo.defaults.description'))">
     <meta property="og:image" content="@yield('og_image', asset(config('seo.defaults.image')))">
-    <meta property="og:url" content="@yield('og_url', url()->current())">
+    <meta property="og:url" content="@yield('canonical', url()->current())">
     <meta property="og:type" content="@yield('og_type', config('seo.open_graph.type'))">
     <meta property="og:site_name" content="{{ config('seo.open_graph.site_name') }}">
     <meta property="og:locale" content="{{ config('seo.open_graph.locale') }}">
