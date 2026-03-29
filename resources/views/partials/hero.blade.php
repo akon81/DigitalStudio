@@ -16,7 +16,7 @@
 				<span class="inline-block mb-3 text-sm text-blue-500 font-bold uppercase tracking-widest">DigitalStudio</span>
 				<h1 class="font-heading mb-6 md:text-5xl text-4xl leading-tight text-gray-900 font-black tracking-tight">
 				<span>Strony i aplikacje</span>
-				<span class="text-blue-500">które będą działać dla Ciebie</span>
+				<span class="neon-text" data-text="które będą działać dla Ciebie">które będą działać dla Ciebie</span>
 				</h1>
 				<p class="mb-8 text-xl font-bold">Zamieniam pomysły w dopracowane strony, które realnie pracują na sukces marki klientów.</p>
 				<div class="flex flex-wrap justify-center -m-2">
