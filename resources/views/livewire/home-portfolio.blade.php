@@ -17,6 +17,7 @@
                         :url="$project->url"
                         :img="$project->getFirstMediaUrl('images') ?: 'https://via.placeholder.com/600x400'"
                         :tags="$project->techStacks->pluck('name')->toArray()"
+                        :glow="$loop->first"
                         wire:key="project-{{ $project->id }}"
                     />
                 @endforeach

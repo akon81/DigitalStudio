@@ -1,4 +1,8 @@
 <div class="w-full md:w-1/2 lg:w-1/3 p-4 portfolio-item" data-category="{{ $category ?? '' }}" x-data="{ showDescription: false }">
+    @if($glow ?? false)
+    <div class="hero-glow-border rounded-3xl h-full">
+        <div class="hero-glow-content rounded-3xl h-full">
+    @endif
     <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden hover:shadow-xl transition-shadow duration-300 relative group h-full flex flex-col">
         <div class="relative">
             <img class="w-full h-64 object-cover" src="{{ $img }}" alt="{{ $title }}" width="600" height="400" loading="lazy"/>
@@ -59,4 +63,8 @@
             @endif
         </div>
     </div>
+    @if($glow ?? false)
+        </div>
+    </div>
+    @endif
 </div>
