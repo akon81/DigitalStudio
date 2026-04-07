@@ -118,13 +118,14 @@
 
                     <!-- Przycisk Submit -->
                     <div class="flex md:justify-center">
-                        <button 
+                        <button
                             type="submit"
-                            class="w-full md:w-auto px-8 py-4 font-semibold text-white transition-all bg-blue-500 rounded-full hover:bg-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30 disabled:opacity-50 disabled:cursor-not-allowed"
+                            class="btn-animated w-full md:w-auto px-8 py-4 font-semibold rounded-full focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30 disabled:opacity-50 disabled:cursor-not-allowed"
                             wire:loading.attr="disabled"
                         >
-                            <span wire:loading.remove>Wyślij wiadomość</span>
-                            <span wire:loading>Wysyłanie...</span>
+                            <span wire:loading.remove class="relative z-10">Wyślij wiadomość</span>
+                            <span wire:loading class="relative z-10">Wysyłanie...</span>
+                            <span class="btn-blob"></span>
                         </button>
                     </div>
                 </form>

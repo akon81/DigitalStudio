@@ -29,7 +29,10 @@
         </div>
 
         <div class="mt-12 text-center">
-            <a href="{{ route('portfolio') }}" class="inline-block px-8 py-4 bg-blue-500 text-white font-bold rounded-full hover:bg-blue-600 transition focus:ring-4 focus:ring-blue-200">Pokaż wszystkie projekty</a>
+            <a href="{{ route('portfolio') }}" class="btn-animated inline-block px-8 py-4 font-bold rounded-full focus:ring-4 focus:ring-blue-200">
+                <span>Pokaż wszystkie projekty</span>
+                <span></span>
+            </a>
         </div>
     </div>
 </section>

@@ -23,7 +23,7 @@
 				<p class="mb-8 text-xl font-bold">Zamieniam pomysły w dopracowane strony, które realnie pracują na sukces marki klientów.</p>
 				<div class="flex flex-wrap justify-center -m-2">
 				<x-button-main title="Zobacz projekty" url="#portfolio" />
-				<div class="w-full md:w-auto p-2"><a class="block w-full px-4 py-2.5 text-sm text-center text-gray-900 font-bold bg-gray-50 hover:bg-gray-200 focus:ring-4 focus:ring-gray-200 rounded-full" href="#kontakt">Kontakt</a></div>
+				<div class="w-full md:w-auto p-2"><a class="btn-animated-gray block w-full px-4 py-2.5 text-sm text-center font-bold rounded-full" href="#kontakt"><span>Kontakt</span><span></span></a></div>
 				</div>
 			</div>
 			</div>

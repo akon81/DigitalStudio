@@ -39,8 +39,9 @@
             <p class="mt-2 text-neutral-600 dark:text-neutral-400">Napisz — chętnie pomogę.</p>
 
             <a href="/kontakt"
-               class="inline-block px-8 py-4 mt-6 font-semibold text-white transition-all bg-blue-500 shadow-lg rounded-full hover:bg-blue-600 focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30">
-                Przejdź do kontaktu
+               class="btn-animated inline-block px-8 py-4 mt-6 font-semibold rounded-full focus:outline-none focus-visible:ring-4 focus-visible:ring-blue-200 dark:focus-visible:ring-blue-900/30">
+                <span>Przejdź do kontaktu</span>
+                <span></span>
             </a>
         </div>
 

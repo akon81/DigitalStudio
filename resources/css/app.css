@@ -195,6 +195,99 @@ img[loading="lazy"].loaded {
     }
 }
 
+/* Animated button */
+.btn-animated {
+    position: relative;
+    display: inline-block;
+    border: none;
+    background-color: #3b82f6;
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-animated span:last-child,
+.btn-animated .btn-blob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #2563eb;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-animated span:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-animated:hover {
+    box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.4);
+    color: #ffffff;
+}
+
+.btn-animated:active {
+    scale: 0.95;
+}
+
+.btn-animated:hover span:last-child,
+.btn-animated:hover .btn-blob {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}
+
+/* Animated button — grey variant */
+.btn-animated-gray {
+    position: relative;
+    display: inline-block;
+    background-color: #f9fafb;
+    color: rgba(17, 24, 39, 0.9);
+    box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-animated-gray span:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: #e5e7eb;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-animated-gray span:first-child {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-animated-gray:hover {
+    box-shadow: 0 0 0 5px rgba(156, 163, 175, 0.4);
+    color: #111827;
+}
+
+.btn-animated-gray:active {
+    scale: 0.95;
+}
+
+.btn-animated-gray:hover span:last-child {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}
+
 @keyframes neon-breathe {
     0%, 100% {
         filter: brightness(1) drop-shadow(0 0 4px rgba(59, 130, 246, 0.3));
