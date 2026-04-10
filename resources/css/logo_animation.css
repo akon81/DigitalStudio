@@ -1,0 +1,50 @@
+/* ── Logo DS – Animation Styles ─────────────────────────────────────────── */
+
+/* SVG fill colours (used inside inline SVG in Blade) */
+.st0 { fill: #5C9DDE; }
+.st1 { fill: #99C1EA; }
+.st2 { fill: #C1DAF3; }
+
+/* Wrapper – adjust or remove to fit your layout */
+.logo-wrapper {
+  width: 100%;
+  max-width: 640px;
+  padding: 40px;
+}
+
+.logo-wrapper svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Squares ─────────────────────────────────────────────────────────────── */
+.sq { opacity: 0; }
+
+@keyframes squarePop {
+  0%   { opacity: 0; transform: scale(0); }
+  65%  { transform: scale(1.18); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.sq-animate {
+  animation: squarePop 0.4s ease-out both;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+/* ── Replay button ───────────────────────────────────────────────────────── */
+.logo-replay-btn {
+  display: block;
+  margin: 24px auto 0;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #5C9DDE;
+  background: transparent;
+  border: 1.5px solid #5C9DDE;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.logo-replay-btn:hover { background: #5C9DDE; color: #fff; }

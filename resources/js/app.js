@@ -1,3 +1,5 @@
+import './logo_animation.js';
+
 (function () {
   const init = () => {
     const filterButtons = document.querySelectorAll(
